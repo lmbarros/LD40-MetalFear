@@ -37,6 +37,7 @@ func hit(weapon):
 	health -= weapon.damage
 	if health < 0.0:
 		isDying = true
+		layers = 0
 		$anim.play("death")
 		yield($anim, "animation_finished")
 		queue_free()
