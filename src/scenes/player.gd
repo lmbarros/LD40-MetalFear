@@ -66,5 +66,7 @@ func _process(delta):
 		$shotRayCast.force_raycast_update()
 		
 		if $shotRayCast.is_colliding():
-			emit_signal("hitWithGun", $shotRayCast.get_collider(), $shotRayCast.get_collision_point())
+			emit_signal("hitWithGun", $shotRayCast.get_collider(),
+				$shotRayCast.get_collision_point(),
+				weapons[weapon])
 			print("BANG! " + $shotRayCast.get_collider().get_name())

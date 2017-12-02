@@ -15,8 +15,13 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-func somethingWasHit(what, where):
+func somethingWasHit(what, where, weapon):
 	print("Something was hit: " + what.get_name())
 	var fx = gunHitFx.instance()
 	fx.position = where
 	add_child(fx)
+	
+	if what.has_method("hit"):
+		what.hit(weapon)
+		
+	
