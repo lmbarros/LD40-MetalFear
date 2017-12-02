@@ -11,6 +11,7 @@ script = ExtResource( 1 )
 
 [node name="henchman1" parent="." instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 101.266, 78.0844 )
 rotation = 3.14159
 
@@ -44,7 +45,7 @@ position = Vector2( 40.7093, 370.281 )
 
 [node name="henchman2" parent="." instance=ExtResource( 2 )]
 
-position = Vector2( 250.277, 506.178 )
+position = Vector2( 631.634, 148.938 )
 rotation = 0.785398
 
 [node name="magnet" parent="." instance=ExtResource( 3 )]

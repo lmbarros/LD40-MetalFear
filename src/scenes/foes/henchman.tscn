@@ -56,7 +56,6 @@ tracks/0/keys = {
 
 [node name="henchman" type="KinematicBody2D"]
 
-position = Vector2( 412, 284 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -88,5 +87,97 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="vision" type="Node2D" parent="."]
+
+visible = false
+
+[node name="v1" type="RayCast2D" parent="vision"]
+
+rotation = 2.61799
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v2" type="RayCast2D" parent="vision"]
+
+rotation = 2.79253
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v3" type="RayCast2D" parent="vision"]
+
+rotation = 2.96706
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v4" type="RayCast2D" parent="vision"]
+
+rotation = 3.14159
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v5" type="RayCast2D" parent="vision"]
+
+rotation = 3.31613
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v6" type="RayCast2D" parent="vision"]
+
+rotation = 3.49066
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v7" type="RayCast2D" parent="vision"]
+
+rotation = 3.66519
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v8" type="RayCast2D" parent="vision"]
+
+rotation = 2.26893
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v9" type="RayCast2D" parent="vision"]
+
+rotation = 4.01426
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v10" type="RayCast2D" parent="vision"]
+
+rotation = 3.05433
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
+
+[node name="v11" type="RayCast2D" parent="vision"]
+
+rotation = 3.22886
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1500 )
+collision_mask = 1
 
 

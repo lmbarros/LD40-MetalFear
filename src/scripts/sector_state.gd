@@ -1,11 +1,10 @@
 extends Node
 
+# ------------------------------------------------------------------------------
+# Magnets
+# ------------------------------------------------------------------------------
 var magnets = []
-
-onready var maxSqDist = 1280 * 1280
-
-func reset():
-	magnets = []
+const maxSqDist = 1280 * 1280
 
 func addMagnet(position, strength):
 	magnets.push_back({pos = position, strength = strength})
@@ -20,5 +19,16 @@ func magnetAttraction(pos):
 		
 		attraction += m.strength * distFactor * (m.pos - pos).normalized()
 
-	print(attraction.length())
 	return attraction
+
+# ------------------------------------------------------------------------------
+# State
+# ------------------------------------------------------------------------------
+var isAlarmRinging = false
+
+# ------------------------------------------------------------------------------
+# General
+# ------------------------------------------------------------------------------
+func reset():
+	magnets = []
+	isAlarmRinging = false

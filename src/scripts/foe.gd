@@ -13,6 +13,7 @@ var patrolIndex = -1
 var patrolTargetPoint = null
 
 func _ready():
+	initVision()
 	patrol = $patrol
 	nextPatrolPoint()
 
@@ -42,6 +43,17 @@ func _process(delta):
 	if isDying:
 		return
 
+	watch()
+
+	if SectorState.isAlarmRinging:
+		doAttack()
+	else:
+		doPatrol()
+
+func doAttack():
+	print("Attacking!")
+
+func doPatrol():
 	if patrol == null:
 		return
 
@@ -51,3 +63,25 @@ func _process(delta):
 	var velocity = (patrolTargetPoint - position).normalized() * speed * 0.5
 	move_and_slide(velocity)
 	rotation = velocity.angle() + PI/2
+
+# ------------------------------------------------------------------------------
+# Vision
+# ------------------------------------------------------------------------------
+func initVision():
+	for i in range($vision.get_child_count()):
+		var rayCast = $vision.get_child(i)
+		rayCast.add_exception(self)
+
+func watch():
+	if SectorState.isAlarmRinging:
+		return
+
+	if $vision == null:
+		return
+
+	for i in range($vision.get_child_count()):
+		var rayCast = $vision.get_child(i)
+		rayCast.force_raycast_update()
+		if rayCast.is_colliding() and rayCast.get_collider() == Player:
+			SectorState.isAlarmRinging = true
+
