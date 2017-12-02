@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 signal hitWithFirearm
 signal hitWithMelee
@@ -68,10 +68,8 @@ func _process(delta):
 	# Magnets
 	velocity += SectorState.magnetAttraction(position) * magnetSpeed
 
-	# Move!		
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screenSize.x)
-	position.y = clamp(position.y, 0, screenSize.y)
+	# Move!
+	move_and_slide(velocity)
 	
 	# Switch weapons
 	if Input.is_action_just_pressed("next_weapon"):

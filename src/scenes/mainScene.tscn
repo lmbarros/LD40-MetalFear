@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/mainScene.gd" type="Script" id=1]
 [ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/stuff/magnet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=4]
 
 [node name="mainScene" type="Node"]
 
@@ -32,5 +33,9 @@ strength = 0.8
 
 position = Vector2( 167.108, 255.483 )
 strength = 0.7
+
+[node name="bush" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 587.329, 299.679 )
 
 
