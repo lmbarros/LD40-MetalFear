@@ -10,11 +10,6 @@ func _ready():
 	Player.connect("hitWithFirearm", self, "somethingWasHit")
 	Player.connect("hitWithMelee", self, "somethingWasHit")
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
 func somethingWasHit(what, where, weapon):
 	print("Something was hit: " + what.get_name())
 	var fx = gunHitFx.instance()
@@ -23,5 +18,3 @@ func somethingWasHit(what, where, weapon):
 	
 	if what.has_method("hit"):
 		what.hit(weapon)
-		
-	

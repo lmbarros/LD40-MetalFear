@@ -11,13 +11,41 @@ script = ExtResource( 1 )
 
 [node name="henchman1" parent="." instance=ExtResource( 2 )]
 
-position = Vector2( 631, 108 )
+position = Vector2( 101.266, 78.0844 )
 rotation = 3.14159
+speed = 150.0
+
+[node name="patrol" type="Node" parent="henchman1"]
+
+[node name="p1" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 102.493, 81.6468 )
+
+[node name="p2" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 1193.66, 110.681 )
+
+[node name="p3" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 1210.69, 452.722 )
+
+[node name="p4" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 617.914, 494.852 )
+
+[node name="p5" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 594.962, 660.279 )
+
+[node name="p6" type="Position2D" parent="henchman1/patrol"]
+
+position = Vector2( 40.7093, 370.281 )
 
 [node name="henchman2" parent="." instance=ExtResource( 2 )]
 
-position = Vector2( 238, 516 )
+position = Vector2( 250.277, 506.178 )
 rotation = 0.785398
+speed = 150.0
 
 [node name="magnet" parent="." instance=ExtResource( 3 )]
 
