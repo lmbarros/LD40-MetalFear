@@ -22,4 +22,7 @@ func _process(delta):
 	position.x = clamp(position.x, 0, screenSize.x)
 	position.y = clamp(position.y, 0, screenSize.y)
 	
+	if velocity.length_squared() > 0:
+		rotation = velocity.angle() + PI/2
+	
 	
