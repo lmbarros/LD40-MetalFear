@@ -15,6 +15,10 @@ run/main_scene="res://scenes/mainScene.tscn"
 boot_splash/image="res://splash.png"
 config/icon="res://icon.png"
 
+[autoload]
+
+Player="*res://scenes/player.tscn"
+
 [display]
 
 window/size/width=1280
