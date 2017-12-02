@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Weapons="*res://scripts/weapons.gd"
+SectorState="*res://scripts/sector_state.gd"
 Player="*res://scenes/player.tscn"
 
 [display]

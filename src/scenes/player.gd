@@ -6,6 +6,7 @@ signal hitWithMelee
 onready var screenSize = get_viewport_rect().size
 
 var speed = 200
+var magnetSpeed = 100 # base speed induced by magnet
 var velocity = Vector2()
 
 # The carried weapons
@@ -45,8 +46,9 @@ func updateWeapon():
 			$sprite/weapon.animation = "pistolIdle"
 
 func _process(delta):
-	# Walk
 	velocity = Vector2()
+
+	# Walk
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("ui_left"):
@@ -55,15 +57,21 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("ui_up"):
 		velocity.y -= 1
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		
+	# Rotate before magnet influence
+	if velocity.length_squared() > 0:
+		rotation = velocity.angle() + PI/2
+
+	# Magnets
+	velocity += SectorState.magnetAttraction(position) * magnetSpeed
+
+	# Move!		
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screenSize.x)
 	position.y = clamp(position.y, 0, screenSize.y)
-	
-	if velocity.length_squared() > 0:
-		rotation = velocity.angle() + PI/2
 	
 	# Switch weapons
 	if Input.is_action_just_pressed("next_weapon"):
