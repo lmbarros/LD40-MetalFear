@@ -57,6 +57,7 @@ animation = "fistIdle"
 
 [node name="collisionShape" type="CollisionShape2D" parent="."]
 
+visible = false
 rotation = 1.5708
 shape = SubResource( 3 )
 
