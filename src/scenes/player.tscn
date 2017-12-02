@@ -15,8 +15,8 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 14.3339
-height = 38.8176
+radius = 16.1631
+height = 34.5779
 
 [node name="player" type="Area2D"]
 
