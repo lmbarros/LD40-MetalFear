@@ -5,9 +5,13 @@ extends Node
 # var b = "textvar"
 
 func _ready():
-	add_child(Player)
+	Player.connect("hitWithGun", self, "somethingWasHit")
+	Player.connect("hitWithGun", self, "somethingWasHit")
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+func somethingWasHit(what):
+	print("Something was hit: " + what.get_name())

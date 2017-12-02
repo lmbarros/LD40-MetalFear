@@ -44,4 +44,12 @@ animation = "default"
 rotation = 1.5708
 shape = SubResource( 2 )
 
+[node name="shotRayCast" type="RayCast2D" parent="."]
+
+rotation = 3.14159
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 1300 )
+collision_mask = 1
+
 
