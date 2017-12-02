@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/player.gd" type="Script" id=1]
 [ext_resource path="res://images/player/player.png" type="Texture" id=2]
+[ext_resource path="res://images/weapons/pistol.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -9,6 +10,15 @@ animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "pistolIdle",
 "speed": 5.0
 } ]
 
@@ -39,6 +49,12 @@ position = Vector2( 0.108887, 0.13559 )
 frames = SubResource( 1 )
 animation = "default"
 
+[node name="weapon" type="AnimatedSprite" parent="sprite"]
+
+position = Vector2( 0, -51 )
+frames = SubResource( 3 )
+animation = "pistolIdle"
+
 [node name="collisionShape" type="CollisionShape2D" parent="."]
 
 rotation = 1.5708
@@ -46,7 +62,7 @@ shape = SubResource( 2 )
 
 [node name="shotRayCast" type="RayCast2D" parent="."]
 
-rotation = 3.14159
+rotation = -3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 1300 )
