@@ -18,14 +18,6 @@ var weaponIndex = 0
 func currWeapon():
 	return arsenal[weaponIndex]
 
-func _ready():
-	# Don't shoot yourself (in the foot or otherwise)
-	# (Why doesn't "ignore parent" work here?)
-	$shotRayCast.add_exception(Player)
-	$meleeRayCast1.add_exception(Player)
-	$meleeRayCast2.add_exception(Player)
-	$meleeRayCast3.add_exception(Player)
-
 func nextWeapon():
 	weaponIndex += 1
 	if weaponIndex >= arsenal.size():

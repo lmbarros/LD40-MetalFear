@@ -36,12 +36,15 @@ height = 34.5779
 
 [node name="player" type="KinematicBody2D"]
 
-position = Vector2( 681.811, 369.248 )
+position = Vector2( 681.547, 369.248 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 
@@ -67,7 +70,7 @@ rotation = -3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 1300 )
-collision_mask = 1
+collision_mask = 6
 
 [node name="meleeRayCast1" type="RayCast2D" parent="."]
 
@@ -76,7 +79,7 @@ rotation = 3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 25 )
-collision_mask = 1
+collision_mask = 6
 
 [node name="meleeRayCast2" type="RayCast2D" parent="."]
 
@@ -85,7 +88,7 @@ rotation = 3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 25 )
-collision_mask = 1
+collision_mask = 6
 
 [node name="meleeRayCast3" type="RayCast2D" parent="."]
 
@@ -94,6 +97,6 @@ rotation = 3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 25 )
-collision_mask = 1
+collision_mask = 6
 
 

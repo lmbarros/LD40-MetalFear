@@ -14,7 +14,6 @@ script = ExtResource( 1 )
 editor/display_folded = true
 position = Vector2( 101.266, 78.0844 )
 rotation = 3.14159
-changeAttackModeInterval = 7.0
 shootInterval = 2.0
 
 [node name="patrol" type="Node" parent="henchman1"]
@@ -49,7 +48,6 @@ position = Vector2( 40.7093, 370.281 )
 
 position = Vector2( 631.634, 148.938 )
 rotation = 0.785398
-changeAttackModeInterval = 7.0
 shootInterval = 1.0
 
 [node name="magnet" parent="." instance=ExtResource( 3 )]
@@ -69,6 +67,24 @@ strength = 0.7
 
 [node name="bush" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 587.329, 299.679 )
+position = Vector2( 567.734, 298.172 )
+
+[node name="bush2" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 478.801, 311.738 )
+rotation = -0.258492
+
+[node name="bush3" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 656.667, 298.172 )
+
+[node name="bush4" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 742.585, 296.664 )
+
+[node name="bush5" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 397.404, 344.899 )
+rotation = -0.556717
 
 

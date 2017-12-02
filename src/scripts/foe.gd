@@ -167,6 +167,8 @@ func shoot():
 # Vision
 # ------------------------------------------------------------------------------
 func initVision():
+	# I want enemies to block the vision of other enemies, so I cannot simply
+	# set the ray cast mask to ignore enemies.
 	for i in range($vision.get_child_count()):
 		var rayCast = $vision.get_child(i)
 		rayCast.add_exception(self)
