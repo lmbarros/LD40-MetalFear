@@ -63,9 +63,11 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 health = 50.0
+speed = 150.0
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 
+position = Vector2( 0, 0.291992 )
 frames = SubResource( 1 )
 animation = "default"
 
