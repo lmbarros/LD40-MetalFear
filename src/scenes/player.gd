@@ -1,34 +1,44 @@
 extends Area2D
 
-var speed = 200
-var velocity = Vector2()
+signal hitWithFirearm
+signal hitWithMelee
+
 onready var screenSize = get_viewport_rect().size
 
-var weapons = [ Weapons.fist, Weapons.pistol ]
-var weapon = 0
+var speed = 200
+var velocity = Vector2()
 
-signal hitWithGun
-signal hitWithMelee
+# The carried weapons
+var arsenal = [ Weapons.fist, Weapons.pistol ]
+
+# The index of the currently selected weapon
+var weaponIndex = 0
+
+func currWeapon():
+	return arsenal[weaponIndex]
 
 func _ready():
 	# Don't shoot yourself (in the foot or otherwise)
 	# (Why doesn't "ignore parent" work here?)
 	$shotRayCast.add_exception(Player)
+	$meleeRayCast1.add_exception(Player)
+	$meleeRayCast2.add_exception(Player)
+	$meleeRayCast3.add_exception(Player)
 
 func nextWeapon():
-	weapon += 1
-	if weapon >= weapons.size():
-		weapon = 0
+	weaponIndex += 1
+	if weaponIndex >= arsenal.size():
+		weaponIndex = 0
 	updateWeapon()
 
 func prevWeapon():
-	weapon -= 1
-	if weapon < 0:
-		weapon = weapons.size() - 1
+	weaponIndex -= 1
+	if weaponIndex < 0:
+		weaponIndex = arsenal.size() - 1
 	updateWeapon()
 
 func updateWeapon():
-	match weapons[weapon]:
+	match currWeapon():
 		Weapons.fist:
 			$sprite/weapon.animation = "fistIdle"
 		Weapons.pistol:
@@ -62,11 +72,31 @@ func _process(delta):
 		prevWeapon()
 
 	# Shoot
-	if Input.is_action_just_pressed("shoot"):
-		$shotRayCast.force_raycast_update()
-		
-		if $shotRayCast.is_colliding():
-			emit_signal("hitWithGun", $shotRayCast.get_collider(),
-				$shotRayCast.get_collision_point(),
-				weapons[weapon])
-			print("BANG! " + $shotRayCast.get_collider().get_name())
+	if Input.is_action_just_pressed("attack"):
+		if currWeapon().type == Weapons.melee:
+			meleeAttack()
+		else:
+			firearmAttack()
+
+func meleeAttackHelper(rayCast):
+	rayCast.force_raycast_update()
+	if rayCast.is_colliding():
+		emit_signal("hitWithMelee", rayCast.get_collider(),
+			rayCast.get_collision_point(),
+			currWeapon())
+
+func meleeAttack():
+	if meleeAttackHelper($meleeRayCast2):
+		return
+	if meleeAttackHelper($meleeRayCast1):
+		return
+	if meleeAttackHelper($meleeRayCast3):
+		return
+	
+func firearmAttack():
+	$shotRayCast.force_raycast_update()
+	
+	if $shotRayCast.is_colliding():
+		emit_signal("hitWithFirearm", $shotRayCast.get_collider(),
+			$shotRayCast.get_collision_point(),
+			currWeapon())

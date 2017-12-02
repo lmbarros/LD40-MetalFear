@@ -36,7 +36,7 @@ height = 34.5779
 
 [node name="player" type="Area2D"]
 
-position = Vector2( 681.811, 369.01 )
+position = Vector2( 681.811, 369.248 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -72,6 +72,33 @@ rotation = -3.14159
 enabled = false
 exclude_parent = true
 cast_to = Vector2( 0, 1300 )
+collision_mask = 1
+
+[node name="meleeRayCast1" type="RayCast2D" parent="."]
+
+position = Vector2( -20, -11 )
+rotation = 3.14159
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 25 )
+collision_mask = 1
+
+[node name="meleeRayCast2" type="RayCast2D" parent="."]
+
+position = Vector2( 0, -11 )
+rotation = 3.14159
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 25 )
+collision_mask = 1
+
+[node name="meleeRayCast3" type="RayCast2D" parent="."]
+
+position = Vector2( 19, -11 )
+rotation = 3.14159
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 25 )
 collision_mask = 1
 
 

@@ -7,8 +7,8 @@ extends Node
 onready var gunHitFx = preload("res://scenes/fx/hit_shot.tscn")
 
 func _ready():
-	Player.connect("hitWithGun", self, "somethingWasHit")
-	Player.connect("hitWithGun", self, "somethingWasHit")
+	Player.connect("hitWithFirearm", self, "somethingWasHit")
+	Player.connect("hitWithMelee", self, "somethingWasHit")
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
