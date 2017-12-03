@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 45.6698, 21.0227 )
+extents = Vector2( 85.8368, 44.1384 )
 
 [node name="bush" type="StaticBody2D"]
 

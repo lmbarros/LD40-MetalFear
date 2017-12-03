@@ -126,10 +126,9 @@ func doAttackMoveTowardsPlayer():
 	rotation = velocity.angle() + PI/2
 	
 func randomizeTargetPosition():
-	var screenSize = get_viewport_rect().size
 	randomTargetPoint = Vector2(
-		int(rand_range(0, screenSize.x)),
-		int(rand_range(0, screenSize.y)))
+		int(rand_range(0, SectorState.width)),
+		int(rand_range(0, SectorState.height)))
 
 	
 func doAttackMoveRandomly():

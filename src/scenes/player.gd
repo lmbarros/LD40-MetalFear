@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-onready var screenSize = get_viewport_rect().size
-
 var speed = 200
 var magnetSpeed = 100 # base speed induced by magnet
 var velocity = Vector2()
@@ -12,6 +10,9 @@ var arsenal = [ Weapons.fist, Weapons.pistol ]
 
 # The index of the currently selected weapon
 var weaponIndex = 0
+
+func _ready():
+	z = 1
 
 func currWeapon():
 	return arsenal[weaponIndex]

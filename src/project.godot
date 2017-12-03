@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Metal Fear"
-run/main_scene="res://scenes/mainScene.tscn"
+run/main_scene="res://scenes/sectors/a1.tscn"
 boot_splash/image="res://splash.png"
 config/icon="res://icon.png"
 
