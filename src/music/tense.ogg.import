@@ -1,0 +1,14 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tense.ogg-7be8b1ba3b417b976da53a035fed585e.oggstr"
+
+[deps]
+
+source_md5="15a46202472834e9211ae4d0aa45b594"
+
+[params]
+
+loop=true
+loop_offset=0
