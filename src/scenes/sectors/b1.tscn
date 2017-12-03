@@ -245,6 +245,32 @@ shape = SubResource( 1 )
 
 [node name="ui" parent="portalA1/collisionShape" instance=ExtResource( 6 )]
 
+[node name="spawnPoints" type="Node2D" parent="."]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="p1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1049.57, 597.236 )
+
+[node name="p2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1050.8, 521.116 )
+
+[node name="p5" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1049.57, 282.934 )
+
+[node name="p3" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 35.4556, 550.581 )
+
+[node name="p4" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 36.6833, 621.79 )
+
 [connection signal="body_entered" from="portalA1" to="." method="goToA1"]
 
 
