@@ -62,6 +62,8 @@ func _process(delta):
 	# Move!
 	move_and_slide(velocity)
 	State.playerWalked(velocity.length() * delta)
+	Player.position.x = clamp(Player.position.x, 0, State.width)
+	Player.position.y = clamp(Player.position.y, 0, State.height)
 	
 	# Switch weapons
 	if Input.is_action_just_pressed("next_weapon"):
