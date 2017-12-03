@@ -36,7 +36,7 @@ func _process(delta):
 
 	watch()
 
-	if SectorState.isAlarmRinging:
+	if State.isAlarmRinging:
 		doAttack()
 	else:
 		doPatrol()
@@ -127,8 +127,8 @@ func doAttackMoveTowardsPlayer():
 	
 func randomizeTargetPosition():
 	randomTargetPoint = Vector2(
-		int(rand_range(0, SectorState.width)),
-		int(rand_range(0, SectorState.height)))
+		int(rand_range(0, State.width)),
+		int(rand_range(0, State.height)))
 
 	
 func doAttackMoveRandomly():
@@ -170,7 +170,7 @@ func initVision():
 		rayCast.add_exception(self)
 
 func watch():
-	if SectorState.isAlarmRinging:
+	if State.isAlarmRinging:
 		return
 
 	if $vision == null:
@@ -180,7 +180,7 @@ func watch():
 		var rayCast = $vision.get_child(i)
 		rayCast.force_raycast_update()
 		if rayCast.is_colliding() and rayCast.get_collider() == Player:
-			SectorState.isAlarmRinging = true
+			State.isAlarmRinging = true
 
 
 # ------------------------------------------------------------------------------

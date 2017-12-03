@@ -11,7 +11,7 @@ func rightToSector(sector):
 	
 func leftToSector(sector):
 	get_tree().change_scene(sectorPath(sector))
-	Player.position.x = SectorState.width - playerOffset
+	Player.position.x = State.width - playerOffset
 	
 func sectorPath(sector):
 	return "res://scenes/sectors/" + sector + ".tscn"

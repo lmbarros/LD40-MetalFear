@@ -57,7 +57,7 @@ func _process(delta):
 		rotation = velocity.angle() + PI/2
 
 	# Magnets
-	velocity += SectorState.magnetAttraction(position) * magnetSpeed
+	velocity += State.magnetAttraction(position) * magnetSpeed
 
 	# Move!
 	move_and_slide(velocity)
