@@ -34,6 +34,8 @@ func foeCreated():
 
 func foeDied():
 	foeCount -= 1
+	if foeCount == 0 && isAnyAlarmRinging():
+		alarmLevel = 0.5
 
 func foeLeftScene():
 	foeCount -= 1
@@ -57,6 +59,9 @@ func playerWasSpotted():
 	alarmLevel = 0.76
 
 func playerWalked(dist):
+	if isAnyAlarmRinging():
+		return
+
 	alarmLevel += dist * Player.metalCarried() * 0.0005
 	alarmLevel = clamp(alarmLevel, 0, 1)
 
@@ -71,6 +76,9 @@ func reset():
 	magnets = []
 
 func _process(delta):
-	if (!isAnyAlarmRinging()):
+	if isAnyAlarmRinging():
+		alarmLevel += delta * 0.02
+	else:
 		alarmLevel -= delta * 0.01
-		alarmLevel = clamp(alarmLevel, 0, 1)
+
+	alarmLevel = clamp(alarmLevel, 0, 1)
