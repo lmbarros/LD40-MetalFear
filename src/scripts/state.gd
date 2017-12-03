@@ -27,11 +27,23 @@ func magnetAttraction(pos):
 # ------------------------------------------------------------------------------
 # Alarm
 # ------------------------------------------------------------------------------
-var isAlarmRinging = false
+
+var alarmLevel = 0.0
+
+func isAnyAlarmRinging():
+	return alarmLevel > 0.75
+
+func isLocalAlarmRinging():
+	return alarmLevel > 0.75 && alarmLevel <= 0.9
+
+func isGlobalAlarmRinging():
+	return alarmLevel > 0.9
+
+func playerWasSpotted():
+	alarmLevel = 0.76
 
 # ------------------------------------------------------------------------------
 # General
 # ------------------------------------------------------------------------------
 func reset():
 	magnets = []
-	isAlarmRinging = false

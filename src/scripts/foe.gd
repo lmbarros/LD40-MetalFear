@@ -36,7 +36,7 @@ func _process(delta):
 
 	watch()
 
-	if State.isAlarmRinging:
+	if State.isAnyAlarmRinging():
 		doAttack()
 	else:
 		doPatrol()
@@ -170,7 +170,7 @@ func initVision():
 		rayCast.add_exception(self)
 
 func watch():
-	if State.isAlarmRinging:
+	if State.isAnyAlarmRinging():
 		return
 
 	if $vision == null:
@@ -180,7 +180,8 @@ func watch():
 		var rayCast = $vision.get_child(i)
 		rayCast.force_raycast_update()
 		if rayCast.is_colliding() and rayCast.get_collider() == Player:
-			State.isAlarmRinging = true
+			State.playerWasSpotted()
+			return
 
 
 # ------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
 extends CanvasLayer
 
-func _ready():
-	pass
+func _process(delta):
+	$pane/alarmLevel.value = clamp(State.alarmLevel * 100.0, 0, 100)
