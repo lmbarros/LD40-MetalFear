@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://music/theme.ogg" type="AudioStream" id=1]
+[ext_resource path="res://music/tense.ogg" type="AudioStream" id=2]
+[ext_resource path="res://music/danger.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sfx/start_alarm.ogg" type="AudioStream" id=4]
+[ext_resource path="res://sfx/punch.wav" type="AudioStream" id=5]
+[ext_resource path="res://sfx/gunfire.ogg" type="AudioStream" id=6]
+
+[node name="sound" type="Node"]
+
+[node name="music" type="Node" parent="."]
+
+[node name="theme" type="AudioStreamPlayer2D" parent="music"]
+
+stream = ExtResource( 1 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="tense" type="AudioStreamPlayer2D" parent="music"]
+
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="danger" type="AudioStreamPlayer2D" parent="music"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="startAlarm" type="AudioStreamPlayer2D" parent="sfx"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="punch" type="AudioStreamPlayer2D" parent="sfx"]
+
+stream = ExtResource( 5 )
+volume_db = -7.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="gunfire" type="AudioStreamPlayer2D" parent="sfx"]
+
+stream = ExtResource( 6 )
+volume_db = 12.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+

@@ -21,6 +21,7 @@ Weapons="*res://scripts/weapons.gd"
 VFX="*res://scripts/vfx.gd"
 State="*res://scripts/state.gd"
 Player="*res://scenes/player.tscn"
+Sound="*res://scenes/sound.tscn"
 
 [display]
 
