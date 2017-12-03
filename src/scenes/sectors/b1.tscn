@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/sectors/b1.gd" type="Script" id=1]
-[ext_resource path="res://images/bg/grass.png" type="Texture" id=2]
-[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/obstacles/tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/bg/grass.png" type="Texture" id=3]
+[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/obstacles/tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,6 +15,8 @@ extents = Vector2( 5.52122, 319.285 )
 [node name="sectorB1" type="Node2D"]
 
 script = ExtResource( 1 )
+
+[node name="ui" parent="." instance=ExtResource( 2 )]
 
 [node name="background" type="TextureRect" parent="."]
 
@@ -29,7 +31,7 @@ rect_clip_content = false
 mouse_filter = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 __meta__ = {
 "_edit_lock_": true
@@ -39,156 +41,155 @@ __meta__ = {
 
 editor/display_folded = true
 
-[node name="bush" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 65.6175, 8.20218 )
 rotation = 0.287295
 
-[node name="bush2" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush2" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 187.163, 0.835739 )
 rotation = -0.448313
 
-[node name="bush3" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush3" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 308.709, -22.4913 )
 rotation = -0.0426536
 
-[node name="bush4" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush4" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 462.177, -6.53069 )
 rotation = 0.224823
 
-[node name="bush19" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush19" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 529.702, 73.2722 )
 rotation = 0.155963
 
-[node name="bush20" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush20" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 540.752, 139.57 )
 rotation = -0.116045
 
-[node name="bush21" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush21" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 539.524, 197.274 )
 rotation = 0.204013
 
-[node name="bush22" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush22" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 521.108, 267.255 )
 rotation = 0.371768
 
-[node name="bush23" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush23" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 497.781, 337.236 )
 rotation = 0.202546
 
-[node name="bush24" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush24" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 484.276, 402.306 )
 rotation = 0.0625725
 
-[node name="bush25" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush25" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 479.365, 466.148 )
 rotation = -0.0764288
 
-[node name="bush26" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush26" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 480.593, 524.96 )
 rotation = -0.170092
 
-[node name="bush27" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush27" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 185.909, 631.979 )
 rotation = -1.64704
 
-[node name="bush28" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush28" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 182.909, 472.979 )
 rotation = -1.53676
 
-[node name="bush5" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush5" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 605.822, 9.4299 )
 rotation = -0.0250335
 
-[node name="bush6" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush6" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 770.339, 5.74669 )
 rotation = -0.0250335
 
-[node name="bush7" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush7" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 910.301, -22.4913 )
 rotation = -0.421646
 
-[node name="bush8" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush8" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 1035.53, -26.1745 )
 rotation = 0.175691
 
-[node name="bush9" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush9" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 61.9343, 712.923 )
 rotation = 0.175691
 
-[node name="bush10" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush10" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 219.085, 730.112 )
 rotation = -0.0518737
 
-[node name="bush11" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush11" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 367.641, 726.429 )
 rotation = 0.0292784
 
-[node name="bush12" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush12" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 527.247, 723.973 )
 rotation = -0.0581815
 
-[node name="bush13" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush13" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 681.942, 703.102 )
 rotation = -0.239281
 
-[node name="bush14" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush14" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 809.626, 709.24 )
 rotation = 0.262083
 
-[node name="bush15" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush15" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 969.232, 712.923 )
 rotation = -0.27014
 
-[node name="bush16" parent="bushes" instance=ExtResource( 3 )]
+[node name="bush16" parent="bushes" instance=ExtResource( 4 )]
 
 position = Vector2( 1090.78, 694.507 )
 rotation = 0.0173008
 
 [node name="trees" type="Node2D" parent="."]
 
-[node name="tree" parent="trees" instance=ExtResource( 4 )]
+[node name="tree" parent="trees" instance=ExtResource( 5 )]
 
 position = Vector2( 326.992, 120.417 )
 rotation = 0.492814
 
-[node name="tree2" parent="trees" instance=ExtResource( 4 )]
+[node name="tree2" parent="trees" instance=ExtResource( 5 )]
 
 position = Vector2( 708.219, 546.059 )
 rotation = -0.170092
 
-[node name="tree3" parent="trees" instance=ExtResource( 4 )]
+[node name="tree3" parent="trees" instance=ExtResource( 5 )]
 
 position = Vector2( 911.787, 144.475 )
 rotation = 0.81459
 
-[node name="henchman" parent="." instance=ExtResource( 5 )]
+[node name="henchman" parent="." instance=ExtResource( 6 )]
 
-editor/display_folded = true
 position = Vector2( 709.49, 123.406 )
 rotation = 2.57973
 
@@ -228,7 +229,6 @@ position = Vector2( 703.035, 120.907 )
 
 [node name="portalA1" type="Area2D" parent="."]
 
-editor/display_folded = true
 position = Vector2( 0, 339.047 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -243,8 +243,6 @@ audio_bus_name = "Master"
 
 position = Vector2( 1.33658, 8.1561 )
 shape = SubResource( 1 )
-
-[node name="ui" parent="portalA1/collisionShape" instance=ExtResource( 6 )]
 
 [node name="spawnPoints" type="Node2D" parent="."]
 
