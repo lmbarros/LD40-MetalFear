@@ -1,7 +1,6 @@
 extends Node
 
-const melee = "melee"
-const firearm = "firearm"
+enum { melee, firearm }
 
 
 var fist = {

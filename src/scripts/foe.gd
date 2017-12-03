@@ -30,20 +30,6 @@ func nextPatrolPoint():
 		patrolIndex = 0
 	patrolTargetPoint = patrol.get_child(patrolIndex).position
 
-func hit(weapon):
-	if isDying:
-		return
-
-	health -= weapon.damage
-	if health < 0.0:
-		isDying = true
-		layers = 0
-		$anim.play("death")
-		yield($anim, "animation_finished")
-		queue_free()
-	else:
-		$anim.play("hit")
-
 func _process(delta):
 	if isDying:
 		return
@@ -69,6 +55,8 @@ func doPatrol():
 # ------------------------------------------------------------------------------
 # Attack
 # ------------------------------------------------------------------------------
+var weapon = null
+
 export var changeAttackModeInterval = 7.0
 export var shootInterval = 0.5
 
@@ -157,11 +145,19 @@ func doAttackMoveRandomly():
 
 
 func shoot():
+	setShootTimer() # keep shooting
+
 	var aim = (randf() - 0.5) * 0.15
 	rotation = (Player.position - position).angle() + PI/2 + aim
 
-	print("BANG!")
-	setShootTimer()
+	$shotRayCast.force_raycast_update()
+	if !$shotRayCast.is_colliding():
+		return
+	
+	var obj = $shotRayCast.get_collider()
+	if obj.has_method("onHit"):
+		var pos = $shotRayCast.get_collision_point()
+		obj.onHit(weapon, pos)
 
 
 # ------------------------------------------------------------------------------
@@ -187,3 +183,22 @@ func watch():
 		if rayCast.is_colliding() and rayCast.get_collider() == Player:
 			SectorState.isAlarmRinging = true
 
+
+# ------------------------------------------------------------------------------
+# React to (poor man's) events
+# ------------------------------------------------------------------------------
+func onHit(weapon, hitPos):
+	if isDying:
+		return
+
+	VFX.gunHit(hitPos)
+
+	health -= weapon.damage
+	if health < 0.0:
+		isDying = true
+		layers = 0
+		$anim.play("death")
+		yield($anim, "animation_finished")
+		queue_free()
+	else:
+		$anim.play("hit")

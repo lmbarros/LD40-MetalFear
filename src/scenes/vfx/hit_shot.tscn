@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/fx/hit_shot_particle.png" type="Texture" id=1]
-[ext_resource path="res://scenes/fx/hit_shot.gd" type="Script" id=2]
+[ext_resource path="res://scenes/vfx/hit_shot.gd" type="Script" id=2]
 
 [sub_resource type="Gradient" id=1]
 
@@ -53,7 +53,6 @@ anim_loop = false
 
 [node name="hitShot" type="Particles2D"]
 
-position = Vector2( 442.238, 170.656 )
 emitting = true
 amount = 5
 lifetime = 0.4

@@ -1,13 +1,11 @@
 extends KinematicBody2D
 
-signal hitWithFirearm
-signal hitWithMelee
-
 onready var screenSize = get_viewport_rect().size
 
 var speed = 200
 var magnetSpeed = 100 # base speed induced by magnet
 var velocity = Vector2()
+var health = 50.0
 
 # The carried weapons
 var arsenal = [ Weapons.fist, Weapons.pistol ]
@@ -76,25 +74,35 @@ func _process(delta):
 		else:
 			firearmAttack()
 
-func meleeAttackHelper(rayCast):
+func attackHelper(rayCast):
 	rayCast.force_raycast_update()
-	if rayCast.is_colliding():
-		emit_signal("hitWithMelee", rayCast.get_collider(),
-			rayCast.get_collision_point(),
-			currWeapon())
+	if !rayCast.is_colliding():
+		return false
+
+	var obj = rayCast.get_collider()
+	if obj.has_method("onHit"):
+		var pos = rayCast.get_collision_point()
+		obj.onHit(currWeapon(), pos)
+
+	return true
 
 func meleeAttack():
-	if meleeAttackHelper($meleeRayCast2):
+	if attackHelper($meleeRayCast2):
 		return
-	if meleeAttackHelper($meleeRayCast1):
+	if attackHelper($meleeRayCast1):
 		return
-	if meleeAttackHelper($meleeRayCast3):
+	if attackHelper($meleeRayCast3):
 		return
 	
 func firearmAttack():
-	$shotRayCast.force_raycast_update()
-	
-	if $shotRayCast.is_colliding():
-		emit_signal("hitWithFirearm", $shotRayCast.get_collider(),
-			$shotRayCast.get_collision_point(),
-			currWeapon())
+	attackHelper($shotRayCast)
+
+# ------------------------------------------------------------------------------
+# React to (poor man's) events
+# ------------------------------------------------------------------------------
+func onHit(weapon, hitPos):
+	VFX.gunHit(hitPos)
+	health -= weapon.damage
+	if health <= 0:
+		print("GAME OVER")
+

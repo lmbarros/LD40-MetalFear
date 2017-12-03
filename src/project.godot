@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 Weapons="*res://scripts/weapons.gd"
 SectorState="*res://scripts/sector_state.gd"
 Player="*res://scenes/player.tscn"
+VFX="*res://scripts/vfx.gd"
 
 [display]
 
