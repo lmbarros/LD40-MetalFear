@@ -24,14 +24,6 @@ texture = ExtResource( 3 )
 
 editor/display_folded = true
 
-[node name="s1" parent="spawnPoints"]
-
-position = Vector2( 1020.53, 50.3768 )
-
-[node name="s5" parent="spawnPoints"]
-
-position = Vector2( 989.8, 230.355 )
-
 [node name="startingPoint" parent="."]
 
 position = Vector2( 344.132, 276.427 )

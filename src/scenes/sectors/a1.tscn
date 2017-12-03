@@ -1,170 +1,157 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/sectors/a1.gd" type="Script" id=1]
-[ext_resource path="res://images/bg/grass.png" type="Texture" id=2]
-[ext_resource path="res://scenes/stuff/shore.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/obstacles/tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/sectors/a1.gd" type="Script" id=2]
+[ext_resource path="res://images/bg/grass.png" type="Texture" id=3]
+[ext_resource path="res://scenes/stuff/shore.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/obstacles/tree.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 329.871, 8.32031 )
+extents = Vector2( 6.8894, 330.632 )
 
-[node name="sectorA1" type="Node2D"]
+[node name="sectorA1" instance=ExtResource( 1 )]
 
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" parent="."]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1.0
-margin_top = 2.0
-margin_right = 1081.0
-margin_bottom = 722.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
+texture = ExtResource( 3 )
+
+[node name="spawnPoints" parent="."]
+
+editor/display_folded = true
+
+[node name="s1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1052.93, 114.957 )
+
+[node name="s2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1051.82, 160.387 )
+
+[node name="s3" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1052.93, 528.256 )
+
+[node name="s4" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1050.71, 586.982 )
+
+[node name="startingPoint" parent="."]
+
+position = Vector2( 424.526, 471.123 )
+
+[node name="shore" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( -4.22808, -1.50734 )
+
+[node name="bushes" type="Node2D" parent="."]
+
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="shore" parent="." instance=ExtResource( 3 )]
-
-position = Vector2( 0, 0 )
-
-[node name="tree" parent="." instance=ExtResource( 4 )]
-
-position = Vector2( 720.934, 179.995 )
-
-[node name="tree2" parent="." instance=ExtResource( 4 )]
-
-position = Vector2( 847.259, 431.679 )
-
-[node name="bushes" type="Node2D" parent="."]
-
-position = Vector2( 1.50734, 0 )
-
 [node name="bush" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 219.918, 739.427 )
-rotation = -0.278036
-
-[node name="bush12" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 242.918, -0.424622 )
-rotation = 0.424391
-
-[node name="bush2" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 368.474, 705.051 )
-rotation = -0.160922
+position = Vector2( 269.882, -16.6858 )
+rotation = 0.344899
 
 [node name="bush7" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 382.474, 15.1986 )
-rotation = -0.160922
-
-[node name="bush3" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 529.308, 690.318 )
-rotation = -0.0865295
-
-[node name="bush11" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 529.308, -21.5342 )
-rotation = -0.347144
-
-[node name="bush4" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 691.369, 684.179 )
-
-[node name="bush9" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 649.369, -15.6731 )
-rotation = 0.250524
-
-[node name="bush5" parent="bushes" instance=ExtResource( 5 )]
-
-position = Vector2( 838.698, 697.684 )
-rotation = 0.154139
+position = Vector2( 284.846, 749.21 )
+rotation = -0.0813041
 
 [node name="bush8" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 790.698, 3.83243 )
-rotation = 0.0114867
+position = Vector2( 435.849, 719.281 )
+rotation = -0.436112
 
-[node name="bush6" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush9" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 1003.21, 695.229 )
-rotation = -0.273735
+position = Vector2( 575.968, 685.272 )
+rotation = -0.071217
 
 [node name="bush10" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 936.215, -13.6234 )
-rotation = -0.273735
+position = Vector2( 722.889, 694.794 )
+rotation = 0.131536
+
+[node name="bush11" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 861.648, 745.128 )
+rotation = 0.470051
+
+[node name="bush12" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 977.281, 742.408 )
+rotation = -0.212468
 
 [node name="bush13" parent="bushes" instance=ExtResource( 5 )]
 
-position = Vector2( 1067.21, -21.6234 )
-rotation = 0.456095
+position = Vector2( 1114.68, 745.128 )
+rotation = 0.215882
+
+[node name="bush2" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 418.359, 5.72737 )
+rotation = -0.0459794
+
+[node name="bush3" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 574.593, 23.456 )
+rotation = 0.270262
+
+[node name="bush4" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 688.721, 14.5917 )
+rotation = -0.45028
+
+[node name="bush5" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 853.819, -16.4334 )
+rotation = 0.0993487
+
+[node name="bush6" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 1014.49, -6.46109 )
+rotation = -0.0228652
+
+[node name="trees" type="Node2D" parent="."]
+
+editor/display_folded = true
+position = Vector2( 361.217, 377.667 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tree" parent="trees" instance=ExtResource( 6 )]
+
+position = Vector2( 486.435, 98.6923 )
+
+[node name="tree2" parent="trees" instance=ExtResource( 6 )]
+
+position = Vector2( 395.994, -165.094 )
 
 [node name="portalB1" type="Area2D" parent="."]
 
-position = Vector2( 1077.78, 324.286 )
+position = Vector2( 1075.95, 360.817 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+monitoring = false
 monitorable = false
 audio_bus_override = false
 audio_bus_name = "Master"
 
 [node name="collisionShape" type="CollisionShape2D" parent="portalB1"]
 
-position = Vector2( 6.33203, 7.98618 )
-rotation = 1.5708
 shape = SubResource( 1 )
-
-[node name="startingPoint" type="Position2D" parent="."]
-
-position = Vector2( 349.887, 442.239 )
-scale = Vector2( 6.51386, 6.51386 )
-
-[node name="ui" parent="." instance=ExtResource( 6 )]
-
-[node name="spawnPoints" type="Node2D" parent="."]
-
-editor/display_folded = true
-visible = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="s1" type="Position2D" parent="spawnPoints"]
-
-position = Vector2( 1054.74, 76.5032 )
-
-[node name="s2" type="Position2D" parent="spawnPoints"]
-
-position = Vector2( 1053.74, 124.503 )
-
-[node name="s3" type="Position2D" parent="spawnPoints"]
-
-position = Vector2( 1054.74, 538.504 )
-
-[node name="s4" type="Position2D" parent="spawnPoints"]
-
-position = Vector2( 1055.74, 598.504 )
 
 [connection signal="body_entered" from="portalB1" to="." method="goToB1"]
 

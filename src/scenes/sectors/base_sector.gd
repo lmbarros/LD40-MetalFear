@@ -33,6 +33,11 @@ func cannotLeaveSector():
 	return State.isGlobalAlarmRinging() \
 		|| (State.isLocalAlarmRinging() && State.foeCount > 0)
 
+func enablePortals():
+	for c in get_children():
+		if c is Area2D:
+			c.monitoring = true
+
 # ------------------------------------------------------------------------------
 # Alarm-related stuff
 # ------------------------------------------------------------------------------
