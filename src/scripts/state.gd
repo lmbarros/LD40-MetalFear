@@ -82,6 +82,9 @@ func changeAlarmLevelBy(amount):
 func reset():
 	magnets = []
 
+func ready():
+	randomize()
+
 func _process(delta):
 	var alarmDelta = 0.0
 
