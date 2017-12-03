@@ -108,6 +108,14 @@ func stopGame():
 	Player.visible = false
 	isGameRunning = false
 
+func gameOver():
+	stopGame()
+	Sound.stopMusic()
+	alarmLevel = 0
+	foeCount = 0
+	get_tree().change_scene("res://scenes/game_over.tscn")
+	
+
 # ------------------------------------------------------------------------------
 # General
 # ------------------------------------------------------------------------------

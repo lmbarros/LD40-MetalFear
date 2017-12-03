@@ -124,5 +124,5 @@ func onHit(weapon, hitPos):
 	VFX.hitBlood(hitPos)
 	health -= weapon.damage
 	if health <= 0:
-		print("GAME OVER")
+		State.gameOver()
 
