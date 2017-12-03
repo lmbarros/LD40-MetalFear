@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5.8076, 304.043 )
+extents = Vector2( 5.8076, 299.617 )
 
 [node name="c1" instance=ExtResource( 1 )]
 
@@ -51,8 +51,6 @@ position = Vector2( 209.889, 347.256 )
 rotation = -0.137875
 
 [node name="bushes" type="Node2D" parent="."]
-
-editor/display_folded = true
 
 [node name="bush" parent="bushes" instance=ExtResource( 5 )]
 
@@ -126,12 +124,13 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 0
 audio_bus_override = false
 audio_bus_name = "Master"
 
 [node name="collisionShape" type="CollisionShape2D" parent="portalB1"]
 
-position = Vector2( -2.02377, 3.10498 )
+position = Vector2( -2.75888, 3.84009 )
 scale = Vector2( 1, 1.0119 )
 shape = SubResource( 1 )
 

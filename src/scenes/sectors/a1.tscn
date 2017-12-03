@@ -51,7 +51,6 @@ position = Vector2( 847.259, 431.679 )
 
 [node name="bushes" type="Node2D" parent="."]
 
-editor/display_folded = true
 position = Vector2( 1.50734, 0 )
 
 [node name="bush" parent="bushes" instance=ExtResource( 5 )]
