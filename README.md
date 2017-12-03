@@ -16,11 +16,12 @@ License is GPL3.
 ### Screen
 
 * Game window: 1280 x 720
-* UI: 200 x 720 (left side of the window)
-* Sector: 1080 x 720 (right side of the window)
+* UI: 200 x 720 (right side of the window)
+* Sector: 1080 x 720 (left side of the window)
 
 
 ### Z-Levels
 
 * Player: 50 (absolute)
 * Trees: 100 (absolute)
+* UI: 1000 (absolute)
