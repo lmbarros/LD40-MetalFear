@@ -247,6 +247,4 @@ shape = SubResource( 1 )
 
 [connection signal="body_entered" from="portalA1" to="." method="goToA1"]
 
-[connection signal="body_exited" from="portalA1" to="." method="enablePortals"]
-
 
