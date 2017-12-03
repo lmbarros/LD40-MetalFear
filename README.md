@@ -12,3 +12,9 @@ License is GPL3.
 * Player: 1
 * Foes: 2
 * Scenario: 3
+
+### Screen
+
+* Game window: 1280 x 720
+* UI: 200 x 720 (left side of the window)
+* Sector: 1080 x 720 (right side of the window)
