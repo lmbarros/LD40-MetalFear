@@ -44,6 +44,8 @@ func foeLeftScene():
 # Alarm
 # ------------------------------------------------------------------------------
 
+signal globalAlarmRung # "rang"?
+
 var alarmLevel = 0.0
 
 func isAnyAlarmRinging():
@@ -76,9 +78,14 @@ func reset():
 	magnets = []
 
 func _process(delta):
+	var wasLocalAlarmRinging = isLocalAlarmRinging()
+	
 	if isAnyAlarmRinging():
-		alarmLevel += delta * 0.02
+		alarmLevel += delta * 0.025
 	else:
 		alarmLevel -= delta * 0.01
 
 	alarmLevel = clamp(alarmLevel, 0, 1)
+
+	if wasLocalAlarmRinging && isGlobalAlarmRinging():
+		emit_signal("globalAlarmRung")

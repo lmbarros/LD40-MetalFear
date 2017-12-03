@@ -2,6 +2,9 @@ extends Node2D
 
 const playerOffset = 40
 
+func _ready():
+	State.connect("globalAlarmRung", self, "globalAlarmRung")
+
 # ------------------------------------------------------------------------------
 # Movement between sectors
 # ------------------------------------------------------------------------------
@@ -20,3 +23,8 @@ func leftToSector(sector):
 func sectorPath(sector):
 	return "res://scenes/sectors/" + sector + ".tscn"
 
+# ------------------------------------------------------------------------------
+# Alarm-related stuff
+# ------------------------------------------------------------------------------
+func globalAlarmRung():
+	print("uuuuuuuuuuuuuuuummm!!!!")
