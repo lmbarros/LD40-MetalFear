@@ -39,6 +39,8 @@ __meta__ = {
 
 [node name="shore" parent="." instance=ExtResource( 3 )]
 
+position = Vector2( 0, 0 )
+
 [node name="tree" parent="." instance=ExtResource( 4 )]
 
 position = Vector2( 720.934, 179.995 )
@@ -50,6 +52,7 @@ position = Vector2( 847.259, 431.679 )
 [node name="bushes" type="Node2D" parent="."]
 
 editor/display_folded = true
+position = Vector2( 1.50734, 0 )
 
 [node name="bush" parent="bushes" instance=ExtResource( 5 )]
 
@@ -117,7 +120,6 @@ rotation = 0.456095
 
 [node name="portalB1" type="Area2D" parent="."]
 
-editor/display_folded = true
 position = Vector2( 1077.78, 324.286 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -136,7 +138,7 @@ shape = SubResource( 1 )
 
 [node name="startingPoint" type="Position2D" parent="."]
 
-position = Vector2( 960.361, 567.348 )
+position = Vector2( 349.887, 442.239 )
 scale = Vector2( 6.51386, 6.51386 )
 
 [node name="ui" parent="." instance=ExtResource( 6 )]

@@ -5,6 +5,12 @@ const playerOffset = 40
 func _ready():
 	State.connect("globalAlarmRung", self, "globalAlarmRung")
 
+	if Player.justStarting:
+		Player.justStarting = false
+		Player.position = $startingPoint.position
+		Player.rotation = PI/2
+
+
 # ------------------------------------------------------------------------------
 # Movement between sectors
 # ------------------------------------------------------------------------------

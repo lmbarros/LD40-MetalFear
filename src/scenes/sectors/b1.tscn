@@ -228,6 +228,7 @@ position = Vector2( 703.035, 120.907 )
 
 [node name="portalA1" type="Area2D" parent="."]
 
+editor/display_folded = true
 position = Vector2( 0, 339.047 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -247,6 +248,7 @@ shape = SubResource( 1 )
 
 [node name="spawnPoints" type="Node2D" parent="."]
 
+editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -270,6 +272,11 @@ position = Vector2( 35.4556, 550.581 )
 [node name="p4" type="Position2D" parent="spawnPoints"]
 
 position = Vector2( 36.6833, 621.79 )
+
+[node name="startingPoint" type="Position2D" parent="."]
+
+position = Vector2( 132.742, 205.679 )
+scale = Vector2( 5.67996, 5.23244 )
 
 [connection signal="body_entered" from="portalA1" to="." method="goToA1"]
 
