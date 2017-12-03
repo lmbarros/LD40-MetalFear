@@ -61,11 +61,17 @@ func playerWasSpotted():
 	alarmLevel = 0.76
 
 func playerWalked(dist):
-	if isAnyAlarmRinging():
+	if isAnyAlarmRinging() && foeCount > 0:
 		return
+
+	var wasLocalAlarmRinging = isLocalAlarmRinging()
 
 	alarmLevel += dist * Player.metalCarried() * 0.0005
 	alarmLevel = clamp(alarmLevel, 0, 1)
+
+	if wasLocalAlarmRinging && isGlobalAlarmRinging():
+		emit_signal("globalAlarmRung")
+
 
 func playerShoot(dist):
 	alarmLevel = clamp(alarmLevel, 0, 1)
@@ -80,7 +86,7 @@ func reset():
 func _process(delta):
 	var wasLocalAlarmRinging = isLocalAlarmRinging()
 	
-	if isAnyAlarmRinging():
+	if isAnyAlarmRinging() && foeCount > 0:
 		alarmLevel += delta * 0.025
 	else:
 		alarmLevel -= delta * 0.01

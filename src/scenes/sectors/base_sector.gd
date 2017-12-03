@@ -9,19 +9,23 @@ func _ready():
 # Movement between sectors
 # ------------------------------------------------------------------------------
 func rightToSector(sector):
-	if State.isAnyAlarmRinging():
+	if cannotLeaveSector():
 		return
 	get_tree().change_scene(sectorPath(sector))
 	Player.position.x = playerOffset
 	
 func leftToSector(sector):
-	if State.isAnyAlarmRinging():
+	if cannotLeaveSector():
 		return
 	get_tree().change_scene(sectorPath(sector))
 	Player.position.x = State.width - playerOffset
 	
 func sectorPath(sector):
 	return "res://scenes/sectors/" + sector + ".tscn"
+
+func cannotLeaveSector():
+	return State.isGlobalAlarmRinging() \
+		|| (State.isLocalAlarmRinging() && State.foeCount > 0)
 
 # ------------------------------------------------------------------------------
 # Alarm-related stuff
