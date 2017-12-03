@@ -11,7 +11,7 @@ var health = maxHealth
 var justStarting = true
 
 # The carried weapons
-var arsenal = [ Weapons.fist, Weapons.pistol ]
+var arsenal = [ Weapons.fist, Weapons.knife, Weapons.pistol, Weapons.rifle ]
 
 # The index of the currently selected weapon
 var weaponIndex = 0
@@ -35,8 +35,12 @@ func updateWeapon():
 	match currWeapon():
 		Weapons.fist:
 			$sprite/weapon.animation = "fistIdle"
+		Weapons.knife:
+			$sprite/weapon.animation = "knifeIdle"
 		Weapons.pistol:
 			$sprite/weapon.animation = "pistolIdle"
+		Weapons.rifle:
+			$sprite/weapon.animation = "rifleIdle"
 
 func _process(delta):
 	if !State.isGameRunning:
