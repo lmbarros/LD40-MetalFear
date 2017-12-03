@@ -92,12 +92,25 @@ func changeAlarmLevelBy(amount):
 		Sound.playStartAlarm()
 
 # ------------------------------------------------------------------------------
+# Game running
+# ------------------------------------------------------------------------------
+var isGameRunning = false
+
+func startGame():
+	Player.visible = true
+	isGameRunning = true
+
+func stopGame():
+	Player.visible = false
+	isGameRunning = false
+
+# ------------------------------------------------------------------------------
 # General
 # ------------------------------------------------------------------------------
 func reset():
 	magnets = []
 
-func ready():
+func _ready():
 	randomize()
 
 func _process(delta):

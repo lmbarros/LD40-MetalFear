@@ -37,6 +37,9 @@ func updateWeapon():
 			$sprite/weapon.animation = "pistolIdle"
 
 func _process(delta):
+	if !State.isGameRunning:
+		return
+	
 	velocity = Vector2()
 
 	# Walk

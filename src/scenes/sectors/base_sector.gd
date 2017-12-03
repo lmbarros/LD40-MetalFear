@@ -4,6 +4,7 @@ const playerOffset = 40
 
 func _ready():
 	State.connect("globalAlarmRung", self, "globalAlarmRung")
+	State.reset()
 
 	if Player.justStarting:
 		Player.justStarting = false
