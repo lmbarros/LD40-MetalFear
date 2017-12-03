@@ -104,5 +104,8 @@ func _process(delta):
 		alarmDelta = delta * 0.025
 	else:
 		alarmDelta = -delta * 0.01
+		
+	if inMetalDetector:
+		alarmDelta += Player.metalCarried() * 0.004
 
 	changeAlarmLevelBy(alarmDelta)

@@ -28,7 +28,7 @@ editor/display_folded = true
 
 [node name="startingPoint" parent="."]
 
-position = Vector2( 241.085, 267.563 )
+position = Vector2( 477.097, 262.023 )
 
 [node name="crates" type="Node2D" parent="."]
 
@@ -137,18 +137,30 @@ position = Vector2( 559.887, 264.429 )
 
 [node name="henchman" parent="." instance=ExtResource( 8 )]
 
-position = Vector2( 382.651, 266.683 )
+position = Vector2( 640.823, 263.359 )
 rotation = -4.69384
 
 [node name="patrol" type="Node" parent="henchman"]
 
 [node name="p1" type="Position2D" parent="henchman/patrol"]
 
-position = Vector2( 442.106, 270.361 )
+position = Vector2( 709.143, 271.469 )
 
 [node name="p2" type="Position2D" parent="henchman/patrol"]
 
-position = Vector2( 652.633, 268.145 )
+position = Vector2( 817.73, 103.048 )
+
+[node name="p3" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 981.72, 270.361 )
+
+[node name="p4" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 999.448, 580.611 )
+
+[node name="p5" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 698.062, 610.528 )
 
 [connection signal="body_entered" from="portalB1" to="." method="goToB1"]
 
