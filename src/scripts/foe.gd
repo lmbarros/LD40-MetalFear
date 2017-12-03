@@ -196,6 +196,8 @@ func watch():
 func onHit(weapon, hitPos):
 	if isDying:
 		return
+		
+	State.playerWasSpotted()
 
 	VFX.hitBlood(hitPos)
 

@@ -5,7 +5,7 @@ enum { melee, firearm }
 
 var fist = {
 	type = melee,
-	damage = 2.0,
+	damage = PI, # :-)
 	metal = 0.0,
 	noise = 0.0,
 }
