@@ -70,7 +70,8 @@ func isGlobalAlarmRinging():
 	return alarmLevel > 0.9
 
 func playerWasSpotted():
-	alarmLevel = 0.76
+	if !isAnyAlarmRinging():
+		alarmLevel = 0.76
 
 func playerWalked(dist):
 	if isAnyAlarmRinging() && foeCount > 0:
