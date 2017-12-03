@@ -7,6 +7,7 @@ func _ready():
 	State.reset()
 
 	if Player.justStarting:
+		State.startGame()
 		Player.justStarting = false
 		Player.position = $startingPoint.position
 		Player.rotation = PI/2

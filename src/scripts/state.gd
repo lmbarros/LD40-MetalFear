@@ -48,6 +48,8 @@ func foeDied():
 	foeCount -= 1
 	if foeCount == 0 && isAnyAlarmRinging():
 		alarmLevel = 0.5
+		Sound.playTense()
+
 
 func foeLeftScene():
 	foeCount -= 1
@@ -91,6 +93,7 @@ func changeAlarmLevelBy(amount):
 		emit_signal("globalAlarmRung")
 	elif !wasLocalAlarmRinging && isLocalAlarmRinging():
 		Sound.playStartAlarm()
+		Sound.playDanger()
 
 # ------------------------------------------------------------------------------
 # Game running
