@@ -25,6 +25,18 @@ func magnetAttraction(pos):
 	return attraction
 
 # ------------------------------------------------------------------------------
+# Metal detectors
+# ------------------------------------------------------------------------------
+var inMetalDetector = false
+
+func enterMetalDetector():
+	inMetalDetector = true
+
+func exitMetalDetector():
+	inMetalDetector = false
+
+
+# ------------------------------------------------------------------------------
 # Enemy count
 # ------------------------------------------------------------------------------
 var foeCount = 0
