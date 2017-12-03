@@ -2,8 +2,8 @@
 
 [ext_resource path="res://scenes/player.gd" type="Script" id=1]
 [ext_resource path="res://images/player/player.png" type="Texture" id=2]
-[ext_resource path="res://images/weapons/fist.png" type="Texture" id=3]
-[ext_resource path="res://images/weapons/pistol.png" type="Texture" id=4]
+[ext_resource path="res://images/weapons/pistol.png" type="Texture" id=3]
+[ext_resource path="res://images/weapons/fist.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -19,12 +19,12 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "fistIdle",
+"name": "pistolIdle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "pistolIdle",
+"name": "fistIdle",
 "speed": 5.0
 } ]
 

@@ -3,7 +3,9 @@ extends KinematicBody2D
 var speed = 200
 var magnetSpeed = 100 # base speed induced by magnet
 var velocity = Vector2()
-var health = 50.0
+
+const maxHealth = 200.0
+var health = maxHealth
 
 # I use this to know where to position the player in the initial sector
 var justStarting = true
