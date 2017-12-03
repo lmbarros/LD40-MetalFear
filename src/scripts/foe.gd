@@ -16,10 +16,16 @@ func _ready():
 	$attackModeTimer.connect("timeout", self, "changeAttackMode")
 	$shootTimer.connect("timeout", self, "shoot")
 	
+	State.foeCreated()
+	
 	initVision()
 	patrol = $patrol
 	nextPatrolPoint()
 	randomizeAttackMode()
+
+func _exit_tree():
+	if !isDying:
+		State.foeLeftScene()
 
 func nextPatrolPoint():
 	if patrol == null || patrol.get_child_count() == 0:
@@ -198,6 +204,7 @@ func onHit(weapon, hitPos):
 		isDying = true
 		layers = 0
 		$anim.play("death")
+		State.foeDied()
 		yield($anim, "animation_finished")
 		queue_free()
 	else:
