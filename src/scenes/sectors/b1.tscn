@@ -25,13 +25,24 @@ script = ExtResource( 2 )
 
 texture = ExtResource( 3 )
 
+[node name="s1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1053.18, 134.106 )
+
+[node name="s2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1056.86, 201.632 )
+
+[node name="s3" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 43.9777, 621.519 )
+
 [node name="startingPoint" parent="."]
 
 position = Vector2( 96.4984, 213.315 )
 
 [node name="bushes" type="Node2D" parent="."]
 
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
