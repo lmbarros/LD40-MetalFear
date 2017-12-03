@@ -86,7 +86,10 @@ func changeAlarmLevelBy(amount):
 	alarmLevel += amount
 	alarmLevel = clamp(alarmLevel, 0, 1)
 	if wasLocalAlarmRinging && isGlobalAlarmRinging():
+		Sound.playStartAlarm()
 		emit_signal("globalAlarmRung")
+	elif !wasLocalAlarmRinging && isLocalAlarmRinging():
+		Sound.playStartAlarm()
 
 # ------------------------------------------------------------------------------
 # General

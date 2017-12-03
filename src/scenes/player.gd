@@ -93,6 +93,7 @@ func attackHelper(rayCast):
 	return true
 
 func meleeAttack():
+	Sound.playPunch()
 	if attackHelper($meleeRayCast2):
 		return
 	if attackHelper($meleeRayCast1):
@@ -101,6 +102,7 @@ func meleeAttack():
 		return
 	
 func firearmAttack():
+	Sound.playGunfire()
 	attackHelper($shotRayCast)
 
 # This could be cached... gotta no time for this :-)

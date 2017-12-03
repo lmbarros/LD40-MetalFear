@@ -151,6 +151,8 @@ func doAttackMoveRandomly():
 
 func shoot():
 	setShootTimer() # keep shooting
+	
+	Sound.playGunfire()
 
 	var aim = (randf() - 0.5) * 0.15
 	rotation = (Player.position - position).angle() + PI/2 + aim
