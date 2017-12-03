@@ -79,6 +79,8 @@ func _process(delta):
 			firearmAttack()
 
 func attackHelper(rayCast):
+	State.playerAttacked(currWeapon())
+	
 	rayCast.force_raycast_update()
 	if !rayCast.is_colliding():
 		return false

@@ -63,19 +63,18 @@ func playerWasSpotted():
 func playerWalked(dist):
 	if isAnyAlarmRinging() && foeCount > 0:
 		return
+	var amount = dist * Player.metalCarried() * 0.0005
+	changeAlarmLevelBy(amount)
 
+func playerAttacked(weapon):
+	changeAlarmLevelBy(weapon.noise)
+
+func changeAlarmLevelBy(amount):
 	var wasLocalAlarmRinging = isLocalAlarmRinging()
-
-	alarmLevel += dist * Player.metalCarried() * 0.0005
+	alarmLevel += amount
 	alarmLevel = clamp(alarmLevel, 0, 1)
-
 	if wasLocalAlarmRinging && isGlobalAlarmRinging():
 		emit_signal("globalAlarmRung")
-
-
-func playerShoot(dist):
-	alarmLevel = clamp(alarmLevel, 0, 1)
-
 
 # ------------------------------------------------------------------------------
 # General
@@ -84,14 +83,11 @@ func reset():
 	magnets = []
 
 func _process(delta):
-	var wasLocalAlarmRinging = isLocalAlarmRinging()
-	
+	var alarmDelta = 0.0
+
 	if isAnyAlarmRinging() && foeCount > 0:
-		alarmLevel += delta * 0.025
+		alarmDelta = delta * 0.025
 	else:
-		alarmLevel -= delta * 0.01
+		alarmDelta = -delta * 0.01
 
-	alarmLevel = clamp(alarmLevel, 0, 1)
-
-	if wasLocalAlarmRinging && isGlobalAlarmRinging():
-		emit_signal("globalAlarmRung")
+	changeAlarmLevelBy(alarmDelta)
