@@ -1,6 +1,6 @@
 extends Node
 
-const width = 1080
+const width = 1080 # window width minus UI width
 const height = 720
 
 # ------------------------------------------------------------------------------

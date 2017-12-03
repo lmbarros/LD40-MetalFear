@@ -22,4 +22,5 @@ License is GPL3.
 
 ### Z-Levels
 
+* Player: 50 (absolute)
 * Trees: 100 (absolute)

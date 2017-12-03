@@ -5,14 +5,14 @@ var magnetSpeed = 100 # base speed induced by magnet
 var velocity = Vector2()
 var health = 50.0
 
+# I use this to know where to position the player in the initial sector
+var justStarting = true
+
 # The carried weapons
 var arsenal = [ Weapons.fist, Weapons.pistol ]
 
 # The index of the currently selected weapon
 var weaponIndex = 0
-
-func _ready():
-	z = 1
 
 func currWeapon():
 	return arsenal[weaponIndex]

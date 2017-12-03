@@ -36,7 +36,8 @@ height = 34.5779
 
 [node name="player" type="KinematicBody2D"]
 
-position = Vector2( 681.547, 369.248 )
+z = 50
+z_as_relative = false
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
