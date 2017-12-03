@@ -191,7 +191,7 @@ func onHit(weapon, hitPos):
 	if isDying:
 		return
 
-	VFX.gunHit(hitPos)
+	VFX.hitBlood(hitPos)
 
 	health -= weapon.damage
 	if health < 0.0:

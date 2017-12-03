@@ -101,7 +101,7 @@ func firearmAttack():
 # React to (poor man's) events
 # ------------------------------------------------------------------------------
 func onHit(weapon, hitPos):
-	VFX.gunHit(hitPos)
+	VFX.hitBlood(hitPos)
 	health -= weapon.damage
 	if health <= 0:
 		print("GAME OVER")
