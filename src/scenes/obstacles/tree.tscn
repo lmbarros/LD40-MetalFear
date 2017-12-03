@@ -11,6 +11,8 @@ radius = 20.8789
 [node name="tree" type="StaticBody2D"]
 
 light_mask = 4
+z = 100
+z_as_relative = false
 input_pickable = false
 collision_layer = 4
 collision_mask = 3
