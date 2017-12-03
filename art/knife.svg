@@ -17,8 +17,8 @@
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="knife.svg"
    inkscape:export-filename="/home/lmb/Projects/LD40-MetalFear/src/images/weapons/knife.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-xdpi="114.86"
+   inkscape:export-ydpi="114.86">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="27.150295"
-     inkscape:cy="24.856898"
+     inkscape:cx="-12.599705"
+     inkscape:cy="23.856898"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
