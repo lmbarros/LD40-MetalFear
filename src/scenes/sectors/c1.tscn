@@ -1,0 +1,140 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/sectors/c1.gd" type="Script" id=2]
+[ext_resource path="res://images/bg/grass_concrete.png" type="Texture" id=3]
+[ext_resource path="res://scenes/obstacles/crate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/obstacles/concrete_wall.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.8076, 304.043 )
+
+[node name="c1" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="background" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="spawnPoints" parent="."]
+
+editor/display_folded = true
+
+[node name="s1" parent="spawnPoints"]
+
+position = Vector2( 1020.53, 50.3768 )
+
+[node name="s5" parent="spawnPoints"]
+
+position = Vector2( 989.8, 230.355 )
+
+[node name="startingPoint" parent="."]
+
+position = Vector2( 344.132, 276.427 )
+
+[node name="crates" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="crate" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 248.978, 186.701 )
+rotation = 0.204546
+
+[node name="crate2" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 209.889, 347.256 )
+rotation = -0.137875
+
+[node name="bushes" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="bush" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 78.4399, -7.66344 )
+
+[node name="bush6" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( -18.0596, 713.993 )
+rotation = 1.07803
+
+[node name="bush2" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 246.204, -8.15605 )
+
+[node name="bush5" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 317.02, 727.066 )
+rotation = -0.788126
+
+[node name="bush3" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 406.204, -13.156 )
+rotation = -0.095298
+
+[node name="bush4" parent="bushes" instance=ExtResource( 5 )]
+
+position = Vector2( 419.204, 679.696 )
+rotation = -0.0227185
+
+[node name="walls" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="concreteWall2" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 710.865, 10.7431 )
+
+[node name="concreteWall3" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 856.762, 10.7431 )
+
+[node name="concreteWall4" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 1004.82, 10.7431 )
+
+[node name="concreteWall" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 564.967, 11.8511 )
+
+[node name="concreteWall5" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 573.096, 708.13 )
+
+[node name="concreteWall6" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 720.115, 708.13 )
+
+[node name="concreteWall7" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 868.604, 708.13 )
+
+[node name="concreteWall8" parent="walls" instance=ExtResource( 6 )]
+
+position = Vector2( 1017.09, 708.13 )
+
+[node name="portalB1" type="Area2D" parent="."]
+
+position = Vector2( 0, 338 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collisionShape" type="CollisionShape2D" parent="portalB1"]
+
+position = Vector2( -2.02377, 3.10498 )
+scale = Vector2( 1, 1.0119 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="portalB1" to="." method="goToB1"]
+
+
