@@ -61,6 +61,7 @@ func _process(delta):
 
 	# Move!
 	move_and_slide(velocity)
+	State.playerWalked(velocity.length() * delta)
 	
 	# Switch weapons
 	if Input.is_action_just_pressed("next_weapon"):
@@ -97,6 +98,13 @@ func meleeAttack():
 	
 func firearmAttack():
 	attackHelper($shotRayCast)
+
+# This could be cached... gotta no time for this :-)
+func metalCarried():
+	var weight = 0.0
+	for weapon in arsenal:
+		weight += weapon.metal
+	return weight
 
 # ------------------------------------------------------------------------------
 # React to (poor man's) events
