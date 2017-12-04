@@ -1,0 +1,335 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/sectors/d1.gd" type="Script" id=2]
+[ext_resource path="res://scenes/obstacles/concrete_wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/obstacles/crate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/stuff/metal_detector.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/stuff/magnet.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.19081, 343.254 )
+
+[node name="sectorD1" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="spawnPoints" parent="."]
+
+editor/display_folded = true
+
+[node name="s1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 36.4378, 105.817 )
+
+[node name="s2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 35.0774, 173.836 )
+
+[node name="s3" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 35.0774, 620.04 )
+
+[node name="startingPoint" parent="."]
+
+position = Vector2( 237.336, 349.678 )
+
+[node name="help" type="Label" parent="ui"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1100.0
+margin_top = 639.0
+margin_right = 1254.0
+margin_bottom = 687.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Magnets attract you.
+The more metal you
+carry, the more they do."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="walls" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="concreteWall" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 71.7226, 7.82734 )
+
+[node name="concreteWall11" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 73.7079, 708.235 )
+
+[node name="concreteWall2" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 220.132, 7.93 )
+
+[node name="concreteWall9" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 222.117, 708.337 )
+
+[node name="concreteWall3" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 368.873, 7.93 )
+
+[node name="concreteWall12" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 370.858, 708.337 )
+
+[node name="concreteWall4" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 518.102, 7.93 )
+
+[node name="concreteWall16" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 520.087, 708.337 )
+
+[node name="concreteWall5" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 667.331, 7.93 )
+
+[node name="concreteWall14" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 669.316, 708.337 )
+
+[node name="concreteWall6" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 817.535, 7.93 )
+
+[node name="concreteWall15" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 819.52, 708.337 )
+
+[node name="concreteWall7" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 966.276, 7.93 )
+
+[node name="concreteWall10" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 968.262, 708.337 )
+
+[node name="concreteWall8" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1113.66, 7.93 )
+
+[node name="concreteWall17" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1068.93, 73.0221 )
+rotation = 1.5708
+
+[node name="concreteWall18" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1068.93, 222.022 )
+rotation = 1.5708
+z = 1
+
+[node name="concreteWall19" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1068.93, 369.023 )
+rotation = 1.5708
+
+[node name="concreteWall20" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1068.93, 516.023 )
+rotation = 1.5708
+
+[node name="concreteWall21" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1068.93, 647.023 )
+rotation = 1.5708
+
+[node name="concreteWall13" parent="walls" instance=ExtResource( 3 )]
+
+position = Vector2( 1117, 708.337 )
+
+[node name="crates" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="crate" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 720.435, 364.568 )
+
+[node name="crate21" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 718.416, 185.04 )
+
+[node name="crate22" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 659.416, 185.04 )
+
+[node name="crate26" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 599.416, 185.04 )
+
+[node name="crate29" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 539.416, 185.04 )
+
+[node name="crate2" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 721.255, 424.546 )
+
+[node name="crate6" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 662.255, 424.546 )
+
+[node name="crate11" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 602.255, 424.546 )
+
+[node name="crate13" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 542.255, 424.546 )
+
+[node name="crate15" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 542.147, 365.028 )
+
+[node name="crate24" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 718.911, 245.171 )
+
+[node name="crate25" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 659.911, 245.171 )
+
+[node name="crate3" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 721.131, 483.527 )
+
+[node name="crate4" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 662.131, 483.527 )
+
+[node name="crate7" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 602.131, 483.527 )
+
+[node name="crate16" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 542.131, 483.527 )
+
+[node name="crate8" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 721.131, 543.527 )
+
+[node name="crate9" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 662.131, 543.527 )
+
+[node name="crate12" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 602.131, 543.527 )
+
+[node name="crate14" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 542.131, 543.527 )
+
+[node name="crate20" parent="crates" instance=ExtResource( 4 )]
+
+position = Vector2( 719.318, 304.985 )
+
+[node name="metalDetectors" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="metalDetector" parent="metalDetectors" instance=ExtResource( 5 )]
+
+position = Vector2( 788.562, 257.747 )
+
+[node name="metalDetector2" parent="metalDetectors" instance=ExtResource( 5 )]
+
+position = Vector2( 868.737, 256.905 )
+
+[node name="metalDetector3" parent="metalDetectors" instance=ExtResource( 5 )]
+
+position = Vector2( 948.134, 257.223 )
+
+[node name="metalDetector4" parent="metalDetectors" instance=ExtResource( 5 )]
+
+position = Vector2( 1028.4, 257.461 )
+
+[node name="henchman" parent="." instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 885.607, 530.159 )
+
+[node name="patrol" type="Node" parent="henchman"]
+
+[node name="p1" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 865.979, 88.718 )
+
+[node name="p2" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 455.141, 88.718 )
+
+[node name="p3" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 66.5106, 643.905 )
+
+[node name="p4" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 890.037, 642.054 )
+
+[node name="henchman2" parent="." instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 985.385, 533.151 )
+
+[node name="patrol" type="Node" parent="henchman2"]
+
+[node name="p1" type="Position2D" parent="henchman2/patrol"]
+
+position = Vector2( 980.019, 172.166 )
+
+[node name="p2" type="Position2D" parent="henchman2/patrol"]
+
+position = Vector2( 988.613, 525.755 )
+
+[node name="magnet" parent="." instance=ExtResource( 7 )]
+
+position = Vector2( 1004.12, 626.244 )
+strength = 0.9
+
+[node name="portalToC1" type="Area2D" parent="."]
+
+position = Vector2( 0, 357 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collisionShape" type="CollisionShape2D" parent="portalToC1"]
+
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="portalToC1" to="." method="goToC1"]
+
+

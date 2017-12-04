@@ -11,7 +11,7 @@ var health = maxHealth
 var justStarting = true
 
 # The carried weapons
-var arsenal = [ Weapons.fist, Weapons.knife, Weapons.pistol, Weapons.rifle ]
+var arsenal = [ Weapons.fist ]
 
 # The index of the currently selected weapon
 var weaponIndex = 0

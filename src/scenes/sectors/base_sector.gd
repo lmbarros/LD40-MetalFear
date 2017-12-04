@@ -11,6 +11,10 @@ func _ready():
 		Player.justStarting = false
 		Player.position = $startingPoint.position
 		Player.rotation = PI/2
+		
+	for c in get_children():
+		if c.has_method("imMagnet") :
+			State.addMagnet(c.position, c.strength)
 
 
 # ------------------------------------------------------------------------------
