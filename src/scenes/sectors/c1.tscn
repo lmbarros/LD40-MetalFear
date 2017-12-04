@@ -3,10 +3,10 @@
 [ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/sectors/c1.gd" type="Script" id=2]
 [ext_resource path="res://images/bg/grass_concrete.png" type="Texture" id=3]
-[ext_resource path="res://scenes/obstacles/crate.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/obstacles/concrete_wall.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/stuff/metal_detector.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/stuff/metal_detector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/obstacles/crate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/obstacles/concrete_wall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -26,9 +26,45 @@ texture = ExtResource( 3 )
 
 editor/display_folded = true
 
+[node name="s1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1042.14, 96.9884 )
+
+[node name="s2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1045.47, 149.066 )
+
+[node name="s3" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1043.25, 210.008 )
+
+[node name="s4" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1046.57, 605.577 )
+
+[node name="s5" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 222.196, 696.436 )
+
+[node name="s6" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 174.551, 694.22 )
+
+[node name="s7" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 33.8302, 184.523 )
+
+[node name="s8" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 32.7222, 237.709 )
+
+[node name="s9" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 33.8302, 292.003 )
+
 [node name="startingPoint" parent="."]
 
-position = Vector2( 477.097, 262.023 )
+position = Vector2( 113.661, 252.051 )
 
 [node name="help" type="Label" parent="ui"]
 
@@ -54,16 +90,131 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="metalDetectors" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="metalDetector" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 61.9925 )
+
+[node name="metalDetector18" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 381.993 )
+
+[node name="metalDetector10" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 221.993 )
+
+[node name="metalDetector20" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 541.993 )
+
+[node name="metalDetector4" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 141.993 )
+
+[node name="metalDetector16" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 461.993 )
+
+[node name="metalDetector9" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 301.993 )
+
+[node name="metalDetector19" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 621.993 )
+
+[node name="metalDetector26" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 545.15, 701.993 )
+
+[node name="metalDetector2" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 61.9925 )
+
+[node name="metalDetector23" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 381.993 )
+
+[node name="metalDetector12" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 221.993 )
+
+[node name="metalDetector22" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 541.993 )
+
+[node name="metalDetector6" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 141.993 )
+
+[node name="metalDetector13" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 461.993 )
+
+[node name="metalDetector7" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 301.993 )
+
+[node name="metalDetector17" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 621.993 )
+
+[node name="metalDetector25" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 625.15, 701.993 )
+
+[node name="metalDetector3" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 61.9925 )
+
+[node name="metalDetector21" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 381.993 )
+
+[node name="metalDetector11" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 221.993 )
+
+[node name="metalDetector24" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 541.993 )
+
+[node name="metalDetector5" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 141.993 )
+
+[node name="metalDetector14" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 461.993 )
+
+[node name="metalDetector8" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 301.993 )
+
+[node name="metalDetector15" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 621.993 )
+
+[node name="metalDetector27" parent="metalDetectors" instance=ExtResource( 4 )]
+
+position = Vector2( 705.15, 701.993 )
+
 [node name="crates" type="Node2D" parent="."]
 
 editor/display_folded = true
 
-[node name="crate" parent="crates" instance=ExtResource( 4 )]
+[node name="crate" parent="crates" instance=ExtResource( 5 )]
 
 position = Vector2( 248.978, 186.701 )
 rotation = 0.204546
 
-[node name="crate2" parent="crates" instance=ExtResource( 4 )]
+[node name="crate2" parent="crates" instance=ExtResource( 5 )]
 
 position = Vector2( 209.889, 347.256 )
 rotation = -0.137875
@@ -72,30 +223,30 @@ rotation = -0.137875
 
 editor/display_folded = true
 
-[node name="bush" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( 78.4399, -7.66344 )
 
-[node name="bush6" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush6" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( -18.0596, 713.993 )
 rotation = 1.07803
 
-[node name="bush2" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush2" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( 246.204, -8.15605 )
 
-[node name="bush5" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush5" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( 317.02, 727.066 )
 rotation = -0.788126
 
-[node name="bush3" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush3" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( 406.204, -13.156 )
 rotation = -0.095298
 
-[node name="bush4" parent="bushes" instance=ExtResource( 5 )]
+[node name="bush4" parent="bushes" instance=ExtResource( 6 )]
 
 position = Vector2( 419.204, 679.696 )
 rotation = -0.0227185
@@ -104,35 +255,35 @@ rotation = -0.0227185
 
 editor/display_folded = true
 
-[node name="concreteWall2" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall2" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 710.865, 10.7431 )
 
-[node name="concreteWall3" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall3" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 856.762, 10.7431 )
 
-[node name="concreteWall4" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall4" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 1004.82, 10.7431 )
 
-[node name="concreteWall" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 564.967, 10.3107 )
 
-[node name="concreteWall5" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall5" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 573.096, 708.13 )
 
-[node name="concreteWall6" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall6" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 720.115, 708.13 )
 
-[node name="concreteWall7" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall7" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 868.604, 708.13 )
 
-[node name="concreteWall8" parent="walls" instance=ExtResource( 6 )]
+[node name="concreteWall8" parent="walls" instance=ExtResource( 7 )]
 
 position = Vector2( 1017.09, 708.13 )
 
@@ -155,36 +306,20 @@ position = Vector2( -2.75888, 3.84009 )
 scale = Vector2( 1, 1.0119 )
 shape = SubResource( 1 )
 
-[node name="metalDetector" parent="." instance=ExtResource( 7 )]
-
-position = Vector2( 559.887, 264.429 )
-
 [node name="henchman" parent="." instance=ExtResource( 8 )]
 
-position = Vector2( 640.823, 263.359 )
-rotation = -4.69384
+position = Vector2( 885.699, 82.7492 )
+rotation = -3.1816
 
 [node name="patrol" type="Node" parent="henchman"]
 
 [node name="p1" type="Position2D" parent="henchman/patrol"]
 
-position = Vector2( 709.143, 271.469 )
+position = Vector2( 890.143, 153.469 )
 
 [node name="p2" type="Position2D" parent="henchman/patrol"]
 
-position = Vector2( 817.73, 103.048 )
-
-[node name="p3" type="Position2D" parent="henchman/patrol"]
-
-position = Vector2( 981.72, 270.361 )
-
-[node name="p4" type="Position2D" parent="henchman/patrol"]
-
-position = Vector2( 999.448, 580.611 )
-
-[node name="p5" type="Position2D" parent="henchman/patrol"]
-
-position = Vector2( 698.062, 610.528 )
+position = Vector2( 926.66, 648.062 )
 
 [connection signal="body_entered" from="portalB1" to="." method="goToB1"]
 
