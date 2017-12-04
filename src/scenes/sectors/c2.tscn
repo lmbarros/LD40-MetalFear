@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/sectors/c2.gd" type="Script" id=2]
@@ -12,6 +12,11 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 121.473, 3.12863 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.82788, 59.0922 )
 
 [node name="sectorC2" instance=ExtResource( 1 )]
 
@@ -190,6 +195,7 @@ position = Vector2( 507.14, 483.035 )
 
 [node name="portalC1" type="Area2D" parent="."]
 
+editor/display_folded = true
 position = Vector2( 145, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -207,6 +213,7 @@ shape = SubResource( 1 )
 
 [node name="henchman" parent="." instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 1022.65, 598.475 )
 
 [node name="patrol" type="Node" parent="henchman"]
@@ -219,6 +226,25 @@ position = Vector2( 1014.83, 198.928 )
 
 position = Vector2( 1014.83, 658.762 )
 
+[node name="portalD2" type="Area2D" parent="."]
+
+position = Vector2( 1080, 646 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collisionShape" type="CollisionShape2D" parent="portalD2"]
+
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="portalC1" to="." method="goToC1"]
+
+[connection signal="body_entered" from="portalD2" to="." method="goToD2"]
 
 
