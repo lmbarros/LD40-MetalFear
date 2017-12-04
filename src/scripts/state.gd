@@ -22,7 +22,9 @@ func magnetAttraction(pos):
 		
 		attraction += m.strength * distFactor * (m.pos - pos).normalized()
 
-	return attraction
+	var metal = Player.metalCarried() / 4.5
+
+	return attraction * metal
 
 # ------------------------------------------------------------------------------
 # Metal detectors
