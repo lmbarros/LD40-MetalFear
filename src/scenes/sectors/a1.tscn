@@ -44,9 +44,36 @@ position = Vector2( 1050.71, 586.982 )
 
 position = Vector2( 424.526, 471.123 )
 
+[node name="help" type="Label" parent="ui"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1091.0
+margin_top = 557.0
+margin_right = 1271.0
+margin_bottom = 709.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "The alarm level increases
+as you move. The more
+metal you carry, the faster
+it goes up.
+
+If there is no alarm ringing,
+you can wait to make the
+alarm level descrease."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 10
+
 [node name="shore" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( -4.22808, -1.50734 )
+position = Vector2( -4.22807, -2.03438 )
 
 [node name="bushes" type="Node2D" parent="."]
 
