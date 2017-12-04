@@ -5,3 +5,6 @@ func goToB1(body):
 
 func goToD1(body):
 	rightToSector("d1")
+
+func goToC2(body):
+	downToSector("c2")

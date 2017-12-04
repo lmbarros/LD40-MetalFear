@@ -32,6 +32,19 @@ func leftToSector(sector):
 	get_tree().change_scene(sectorPath(sector))
 	Player.position.x = State.width - playerOffset
 	
+func upToSector(sector):
+	if cannotLeaveSector():
+		return
+	get_tree().change_scene(sectorPath(sector))
+	Player.position.y = State.height - playerOffset
+
+func downToSector(sector):
+	if cannotLeaveSector():
+		return
+	get_tree().change_scene(sectorPath(sector))
+	Player.position.y = playerOffset
+
+
 func sectorPath(sector):
 	return "res://scenes/sectors/" + sector + ".tscn"
 

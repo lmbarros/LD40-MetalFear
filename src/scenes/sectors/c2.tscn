@@ -1,0 +1,224 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/sectors/c2.gd" type="Script" id=2]
+[ext_resource path="res://images/bg/grass.png" type="Texture" id=3]
+[ext_resource path="res://scenes/obstacles/concrete_wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/obstacles/bush.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/obstacles/tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/foes/henchman.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 121.473, 3.12863 )
+
+[node name="sectorC2" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="background" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="s1" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 1036.08, 639.014 )
+
+[node name="s2" type="Position2D" parent="spawnPoints"]
+
+position = Vector2( 116.415, 70.5923 )
+
+[node name="startingPoint" parent="."]
+
+position = Vector2( 182.276, 94.7291 )
+
+[node name="obstacles" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="concreteWall" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 551.688, 7.18328 )
+
+[node name="concreteWall2" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 698.796, 7.18328 )
+
+[node name="concreteWall3" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 845.903, 7.18328 )
+
+[node name="concreteWall4" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 993.011, 7.18328 )
+
+[node name="concreteWall5" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 1069.72, 69.4558 )
+rotation = 1.5708
+
+[node name="concreteWall6" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 1069.72, 217.466 )
+rotation = 1.5708
+
+[node name="concreteWall7" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 1069.72, 367.366 )
+rotation = 1.5708
+
+[node name="concreteWall8" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 1069.68, 515.415 )
+rotation = 1.5708
+
+[node name="concreteWall9" parent="obstacles" instance=ExtResource( 4 )]
+
+position = Vector2( 1067.87, 778.043 )
+rotation = 1.5708
+
+[node name="bush" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( -1.63354, 82.8898 )
+rotation = 1.39414
+
+[node name="bush13" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 390.366, -3.11019 )
+rotation = -0.222868
+
+[node name="bush14" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 296.366, -23.1102 )
+rotation = 0.807244
+
+[node name="bush2" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 971.134, 749.017 )
+rotation = -0.0183626
+
+[node name="bush3" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 870.923, 727.305 )
+rotation = 0.482702
+
+[node name="bush4" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 747.33, 703.922 )
+rotation = -0.104179
+
+[node name="bush5" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 583.652, 697.241 )
+rotation = 0.140058
+
+[node name="bush6" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 473.42, 732.315 )
+rotation = -0.696686
+
+[node name="bush7" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 344.815, 752.357 )
+rotation = -3.07446
+
+[node name="bush8" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 197.839, 702.252 )
+rotation = -2.47582
+
+[node name="bush9" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 85.9372, 581.999 )
+rotation = -2.1297
+
+[node name="bush10" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 27.4808, 450.054 )
+rotation = -1.80334
+
+[node name="bush11" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 12.4491, 338.152 )
+rotation = -1.58857
+
+[node name="bush12" parent="obstacles" instance=ExtResource( 5 )]
+
+position = Vector2( 9.10876, 221.239 )
+rotation = -1.64196
+
+[node name="tree" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 21.1168, 611.639 )
+
+[node name="tree2" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 77.903, 700.159 )
+
+[node name="tree3" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 290.016, 616.65 )
+
+[node name="tree4" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 178.114, 459.653 )
+
+[node name="tree5" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 348.472, 324.368 )
+
+[node name="tree6" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 169.763, 245.869 )
+
+[node name="tree7" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 340.122, 119.936 )
+
+[node name="tree8" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 558.915, 133.967 )
+
+[node name="tree9" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 644.095, 314.347 )
+
+[node name="tree10" parent="obstacles" instance=ExtResource( 6 )]
+
+position = Vector2( 507.14, 483.035 )
+
+[node name="portalC1" type="Area2D" parent="."]
+
+position = Vector2( 145, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collisionShape" type="CollisionShape2D" parent="portalC1"]
+
+shape = SubResource( 1 )
+
+[node name="henchman" parent="." instance=ExtResource( 7 )]
+
+position = Vector2( 1022.65, 598.475 )
+
+[node name="patrol" type="Node" parent="henchman"]
+
+[node name="p1" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 1014.83, 198.928 )
+
+[node name="p2" type="Position2D" parent="henchman/patrol"]
+
+position = Vector2( 1014.83, 658.762 )
+
+[connection signal="body_entered" from="portalC1" to="." method="goToC1"]
+
+
