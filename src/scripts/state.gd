@@ -115,6 +115,12 @@ func gameOver():
 	foeCount = 0
 	get_tree().change_scene("res://scenes/game_over.tscn")
 	
+func winGame():
+	stopGame()
+	Sound.stopMusic()
+	alarmLevel = 0
+	foeCount = 0
+	get_tree().change_scene("res://scenes/win_game.tscn")
 
 # ------------------------------------------------------------------------------
 # General
