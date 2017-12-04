@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/sectors/sector_template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/sectors/d1.gd" type="Script" id=2]
@@ -12,6 +12,11 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 4.19081, 343.254 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 78.611, 4.69586 )
 
 [node name="sectorD1" instance=ExtResource( 1 )]
 
@@ -101,10 +106,6 @@ position = Vector2( 520.087, 708.337 )
 [node name="concreteWall5" parent="walls" instance=ExtResource( 3 )]
 
 position = Vector2( 667.331, 7.93 )
-
-[node name="concreteWall14" parent="walls" instance=ExtResource( 3 )]
-
-position = Vector2( 669.316, 708.337 )
 
 [node name="concreteWall6" parent="walls" instance=ExtResource( 3 )]
 
@@ -330,6 +331,25 @@ audio_bus_name = "Master"
 
 shape = SubResource( 1 )
 
+[node name="portalD2" type="Area2D" parent="."]
+
+position = Vector2( 670, 720 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collisionShape" type="CollisionShape2D" parent="portalD2"]
+
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="portalToC1" to="." method="goToC1"]
+
+[connection signal="body_entered" from="portalD2" to="." method="goToD2"]
 
 
