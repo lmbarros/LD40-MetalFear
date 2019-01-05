@@ -2,10 +2,10 @@
 
 [ext_resource path="res://scenes/player.gd" type="Script" id=1]
 [ext_resource path="res://images/player/player.png" type="Texture" id=2]
-[ext_resource path="res://images/weapons/knife.png" type="Texture" id=3]
+[ext_resource path="res://images/weapons/rifle.png" type="Texture" id=3]
 [ext_resource path="res://images/weapons/pistol.png" type="Texture" id=4]
 [ext_resource path="res://images/weapons/fist.png" type="Texture" id=5]
-[ext_resource path="res://images/weapons/rifle.png" type="Texture" id=6]
+[ext_resource path="res://images/weapons/knife.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -21,7 +21,7 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "knifeIdle",
+"name": "rifleIdle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -36,7 +36,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "rifleIdle",
+"name": "knifeIdle",
 "speed": 5.0
 } ]
 
@@ -46,38 +46,40 @@ custom_solver_bias = 0.0
 radius = 16.1631
 height = 34.5779
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" index="0"]
 
-z = 50
 z_as_relative = false
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="sprite" type="AnimatedSprite" parent="."]
+[node name="sprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 0.108887, 0.13559 )
+z_index = 50
 frames = SubResource( 1 )
 animation = "default"
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="weapon" type="AnimatedSprite" parent="sprite"]
+[node name="weapon" type="AnimatedSprite" parent="sprite" index="0"]
 
 position = Vector2( 0, -51 )
 frames = SubResource( 2 )
 animation = "fistIdle"
 
-[node name="collisionShape" type="CollisionShape2D" parent="."]
+[node name="collisionShape" type="CollisionShape2D" parent="." index="1"]
 
 visible = false
 rotation = 1.5708
 shape = SubResource( 3 )
 
-[node name="shotRayCast" type="RayCast2D" parent="."]
+[node name="shotRayCast" type="RayCast2D" parent="." index="2"]
 
 rotation = -3.14159
 enabled = false
@@ -85,7 +87,7 @@ exclude_parent = true
 cast_to = Vector2( 0, 1300 )
 collision_mask = 6
 
-[node name="meleeRayCast1" type="RayCast2D" parent="."]
+[node name="meleeRayCast1" type="RayCast2D" parent="." index="3"]
 
 position = Vector2( -20, -11 )
 rotation = 3.14159
@@ -94,7 +96,7 @@ exclude_parent = true
 cast_to = Vector2( 0, 25 )
 collision_mask = 6
 
-[node name="meleeRayCast2" type="RayCast2D" parent="."]
+[node name="meleeRayCast2" type="RayCast2D" parent="." index="4"]
 
 position = Vector2( 0, -11 )
 rotation = 3.14159
@@ -103,7 +105,7 @@ exclude_parent = true
 cast_to = Vector2( 0, 25 )
 collision_mask = 6
 
-[node name="meleeRayCast3" type="RayCast2D" parent="."]
+[node name="meleeRayCast3" type="RayCast2D" parent="." index="5"]
 
 position = Vector2( 19, -11 )
 rotation = 3.14159
