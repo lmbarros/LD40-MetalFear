@@ -6,7 +6,8 @@ path="res://.import/fist.png-228deb96e76a2c53f13df53884449fcc.stex"
 
 [deps]
 
-source_md5="2983d7a7efe7edb209d862bf4ee49288"
+source_file="res://images/weapons/fist.png"
+dest_files=[ "res://.import/fist.png-228deb96e76a2c53f13df53884449fcc.stex" ]
 
 [params]
 

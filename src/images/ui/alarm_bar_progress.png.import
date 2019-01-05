@@ -6,7 +6,8 @@ path="res://.import/alarm_bar_progress.png-271d3b1a720f1759c841f2651e9f6fd7.stex
 
 [deps]
 
-source_md5="67d2f4bdbf9bc73a84ccdfbe7592fb6c"
+source_file="res://images/ui/alarm_bar_progress.png"
+dest_files=[ "res://.import/alarm_bar_progress.png-271d3b1a720f1759c841f2651e9f6fd7.stex" ]
 
 [params]
 

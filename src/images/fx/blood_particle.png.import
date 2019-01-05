@@ -6,7 +6,8 @@ path="res://.import/blood_particle.png-2dee12b93fcb2720a877ed99fa5f9472.stex"
 
 [deps]
 
-source_md5="93b749ebe476afa98cee8964558cab40"
+source_file="res://images/fx/blood_particle.png"
+dest_files=[ "res://.import/blood_particle.png-2dee12b93fcb2720a877ed99fa5f9472.stex" ]
 
 [params]
 

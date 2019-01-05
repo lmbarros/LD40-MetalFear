@@ -6,7 +6,8 @@ path="res://.import/metal_detector.png-83cc5b5b9358430329bbf2c297a93d99.stex"
 
 [deps]
 
-source_md5="1f7b72d63501b109d1e74fa40b479d6b"
+source_file="res://images/stuff/metal_detector.png"
+dest_files=[ "res://.import/metal_detector.png-83cc5b5b9358430329bbf2c297a93d99.stex" ]
 
 [params]
 

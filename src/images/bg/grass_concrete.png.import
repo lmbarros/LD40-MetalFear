@@ -6,7 +6,8 @@ path="res://.import/grass_concrete.png-f4227225a69cb0b1cf6de8720afe729e.stex"
 
 [deps]
 
-source_md5="b4cf84b7b1e78705d66b8dfb47f84567"
+source_file="res://images/bg/grass_concrete.png"
+dest_files=[ "res://.import/grass_concrete.png-f4227225a69cb0b1cf6de8720afe729e.stex" ]
 
 [params]
 

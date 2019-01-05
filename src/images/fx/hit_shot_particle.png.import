@@ -6,7 +6,8 @@ path="res://.import/hit_shot_particle.png-c5c8eab86c0b75928f92774229ed15ef.stex"
 
 [deps]
 
-source_md5="bdf9ae50d4dfcf0c933cf2c07d30f4e2"
+source_file="res://images/fx/hit_shot_particle.png"
+dest_files=[ "res://.import/hit_shot_particle.png-c5c8eab86c0b75928f92774229ed15ef.stex" ]
 
 [params]
 

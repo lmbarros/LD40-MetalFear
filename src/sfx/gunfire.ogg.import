@@ -6,7 +6,8 @@ path="res://.import/gunfire.ogg-b8af918f024c92c152c12cbc614ff707.oggstr"
 
 [deps]
 
-source_md5="0f4e54d26fb90b3f7fdf29cac4b1c223"
+source_file="res://sfx/gunfire.ogg"
+dest_files=[ "res://.import/gunfire.ogg-b8af918f024c92c152c12cbc614ff707.oggstr" ]
 
 [params]
 

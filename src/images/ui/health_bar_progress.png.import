@@ -6,7 +6,8 @@ path="res://.import/health_bar_progress.png-677f9ed8f74e4fb9ce9030e58bf5bb30.ste
 
 [deps]
 
-source_md5="ada20694819949d79bd73e8cc9d055d8"
+source_file="res://images/ui/health_bar_progress.png"
+dest_files=[ "res://.import/health_bar_progress.png-677f9ed8f74e4fb9ce9030e58bf5bb30.stex" ]
 
 [params]
 

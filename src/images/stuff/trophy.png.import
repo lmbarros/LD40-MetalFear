@@ -6,7 +6,8 @@ path="res://.import/trophy.png-db813735c1101020fa233ce185791111.stex"
 
 [deps]
 
-source_md5="0cba46525ad0e4a3fa1743ba72036f70"
+source_file="res://images/stuff/trophy.png"
+dest_files=[ "res://.import/trophy.png-db813735c1101020fa233ce185791111.stex" ]
 
 [params]
 

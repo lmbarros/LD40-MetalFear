@@ -2,11 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui.png-f023fad2da19e3aac41d4379846e9a76.stex"
+path="res://.import/bg.png-19d3683cc6cf9579a20764e5918d94bc.stex"
 
 [deps]
 
-source_md5="942a83335c4f51c62c9502844395d888"
+source_file="res://images/ui/bg.png"
+dest_files=[ "res://.import/bg.png-19d3683cc6cf9579a20764e5918d94bc.stex" ]
 
 [params]
 

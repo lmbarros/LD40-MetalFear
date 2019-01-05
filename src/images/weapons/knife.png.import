@@ -6,7 +6,8 @@ path="res://.import/knife.png-69083338dcf44df04a210e6e97e538f9.stex"
 
 [deps]
 
-source_md5="fec80c018e70401d02c98e50deb94dda"
+source_file="res://images/weapons/knife.png"
+dest_files=[ "res://.import/knife.png-69083338dcf44df04a210e6e97e538f9.stex" ]
 
 [params]
 

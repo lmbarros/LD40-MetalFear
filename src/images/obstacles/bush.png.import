@@ -6,7 +6,8 @@ path="res://.import/bush.png-93f89558e6c8ef1eb986bed90ddc7706.stex"
 
 [deps]
 
-source_md5="76f2e986ba7fbda3f476524029532236"
+source_file="res://images/obstacles/bush.png"
+dest_files=[ "res://.import/bush.png-93f89558e6c8ef1eb986bed90ddc7706.stex" ]
 
 [params]
 

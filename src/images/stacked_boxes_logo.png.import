@@ -6,7 +6,8 @@ path="res://.import/stacked_boxes_logo.png-1ccccf235a2283275a59ae46bdfe9ef1.stex
 
 [deps]
 
-source_md5="a46c3fefdceb0f6547153904a9177285"
+source_file="res://images/stacked_boxes_logo.png"
+dest_files=[ "res://.import/stacked_boxes_logo.png-1ccccf235a2283275a59ae46bdfe9ef1.stex" ]
 
 [params]
 

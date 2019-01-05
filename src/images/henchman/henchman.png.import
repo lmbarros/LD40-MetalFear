@@ -6,7 +6,8 @@ path="res://.import/henchman.png-14faf2ee7ca5295d4bd761f478b3f738.stex"
 
 [deps]
 
-source_md5="8a1afe859ed39bef1c86cf60bb12f3c0"
+source_file="res://images/henchman/henchman.png"
+dest_files=[ "res://.import/henchman.png-14faf2ee7ca5295d4bd761f478b3f738.stex" ]
 
 [params]
 

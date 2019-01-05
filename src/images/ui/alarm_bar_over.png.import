@@ -6,7 +6,8 @@ path="res://.import/alarm_bar_over.png-8f1b3c4a394b8b284ae50ae6799e0f71.stex"
 
 [deps]
 
-source_md5="4525bcb704ac65410ab69d8aa229f800"
+source_file="res://images/ui/alarm_bar_over.png"
+dest_files=[ "res://.import/alarm_bar_over.png-8f1b3c4a394b8b284ae50ae6799e0f71.stex" ]
 
 [params]
 

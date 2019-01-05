@@ -6,7 +6,8 @@ path="res://.import/tree_1.png-7361fd2d2cb351b8fe55f4354945682f.stex"
 
 [deps]
 
-source_md5="9b7b5252ceeff7af3e8774d5a573d1ec"
+source_file="res://images/obstacles/tree_1.png"
+dest_files=[ "res://.import/tree_1.png-7361fd2d2cb351b8fe55f4354945682f.stex" ]
 
 [params]
 

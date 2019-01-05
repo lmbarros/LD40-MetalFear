@@ -6,7 +6,8 @@ path="res://.import/concrete_wall.png-26ae5cf97c7966f8c92732f244860e41.stex"
 
 [deps]
 
-source_md5="4dc4b518b38b32d5eaba0c2251373ffe"
+source_file="res://images/obstacles/concrete_wall.png"
+dest_files=[ "res://.import/concrete_wall.png-26ae5cf97c7966f8c92732f244860e41.stex" ]
 
 [params]
 

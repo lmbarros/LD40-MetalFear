@@ -6,7 +6,8 @@ path="res://.import/crate.png-87d7c23d363c9b2a74e4bd6c397d1b96.stex"
 
 [deps]
 
-source_md5="e50884b58334737da6d58e9b7fbb8fb1"
+source_file="res://images/obstacles/crate.png"
+dest_files=[ "res://.import/crate.png-87d7c23d363c9b2a74e4bd6c397d1b96.stex" ]
 
 [params]
 

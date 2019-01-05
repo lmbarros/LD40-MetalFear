@@ -6,7 +6,8 @@ path="res://.import/health_bar_over.png-f0bb7afb7c837116627ce8c43be1b1a9.stex"
 
 [deps]
 
-source_md5="8aa47b55a9ea63a3ef811d97445ca503"
+source_file="res://images/ui/health_bar_over.png"
+dest_files=[ "res://.import/health_bar_over.png-f0bb7afb7c837116627ce8c43be1b1a9.stex" ]
 
 [params]
 

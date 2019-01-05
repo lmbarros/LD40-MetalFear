@@ -6,7 +6,8 @@ path="res://.import/concrete.png-d65be2002e2973347caf32216378ec00.stex"
 
 [deps]
 
-source_md5="beff30a3b23dd8ee90362126994bd8ac"
+source_file="res://images/bg/concrete.png"
+dest_files=[ "res://.import/concrete.png-d65be2002e2973347caf32216378ec00.stex" ]
 
 [params]
 

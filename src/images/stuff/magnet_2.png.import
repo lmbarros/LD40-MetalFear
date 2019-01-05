@@ -6,7 +6,8 @@ path="res://.import/magnet_2.png-85a1a4657837d84c0d11ca99658729c6.stex"
 
 [deps]
 
-source_md5="27ec36eb9996069f7d084f7305772ca4"
+source_file="res://images/stuff/magnet_2.png"
+dest_files=[ "res://.import/magnet_2.png-85a1a4657837d84c0d11ca99658729c6.stex" ]
 
 [params]
 

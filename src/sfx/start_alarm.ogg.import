@@ -6,7 +6,8 @@ path="res://.import/start_alarm.ogg-1910e3aba7adc5917836f1c72662446f.oggstr"
 
 [deps]
 
-source_md5="a72114ad49be7e5fdc6f3ac929d00506"
+source_file="res://sfx/start_alarm.ogg"
+dest_files=[ "res://.import/start_alarm.ogg-1910e3aba7adc5917836f1c72662446f.oggstr" ]
 
 [params]
 

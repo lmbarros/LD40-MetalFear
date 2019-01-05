@@ -6,7 +6,8 @@ path="res://.import/danger.ogg-4a47d427ca4c8d1dbd83acd7c1d0bab7.oggstr"
 
 [deps]
 
-source_md5="037bdc90e539ab0cc7931c0c7140ccf4"
+source_file="res://music/danger.ogg"
+dest_files=[ "res://.import/danger.ogg-4a47d427ca4c8d1dbd83acd7c1d0bab7.oggstr" ]
 
 [params]
 

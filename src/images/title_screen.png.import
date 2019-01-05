@@ -6,7 +6,8 @@ path="res://.import/title_screen.png-ea2452289b01bcc9c8e785b9904d4df1.stex"
 
 [deps]
 
-source_md5="83392b89b44f9681f2fc95493638e3d4"
+source_file="res://images/title_screen.png"
+dest_files=[ "res://.import/title_screen.png-ea2452289b01bcc9c8e785b9904d4df1.stex" ]
 
 [params]
 

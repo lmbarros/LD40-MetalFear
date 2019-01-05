@@ -6,7 +6,8 @@ path="res://.import/punch.wav-9c2641070d033e768539785b0cbdbd16.sample"
 
 [deps]
 
-source_md5="ed61d1eb406314d2b3cdfa8db0126efa"
+source_file="res://sfx/punch.wav"
+dest_files=[ "res://.import/punch.wav-9c2641070d033e768539785b0cbdbd16.sample" ]
 
 [params]
 

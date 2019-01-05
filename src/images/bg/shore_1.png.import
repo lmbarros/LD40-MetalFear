@@ -6,7 +6,8 @@ path="res://.import/shore_1.png-f3e54f20ca754de662521b9d99e44375.stex"
 
 [deps]
 
-source_md5="de0656baf498e5ec3ba10098825ef786"
+source_file="res://images/bg/shore_1.png"
+dest_files=[ "res://.import/shore_1.png-f3e54f20ca754de662521b9d99e44375.stex" ]
 
 [params]
 

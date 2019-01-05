@@ -6,7 +6,8 @@ path="res://.import/theme.ogg-2fa186b0722316cfee700994a0758a07.oggstr"
 
 [deps]
 
-source_md5="8416bf41c77e425fc052db26af20cfd1"
+source_file="res://music/theme.ogg"
+dest_files=[ "res://.import/theme.ogg-2fa186b0722316cfee700994a0758a07.oggstr" ]
 
 [params]
 
