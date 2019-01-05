@@ -15,11 +15,11 @@ func addMagnet(position, strength):
 
 func magnetAttraction(pos):
 	var attraction = Vector2(0.0, 0.0)
-	
+
 	for m in magnets:
 		var distFactor = \
 			(maxSqDist - m.pos.distance_squared_to(pos)) / maxSqDist
-		
+
 		attraction += m.strength * distFactor * (m.pos - pos).normalized()
 
 	var metal = Player.metalCarried() / 4.5
@@ -116,7 +116,7 @@ func gameOver():
 	alarmLevel = 0
 	foeCount = 0
 	get_tree().change_scene("res://scenes/game_over.tscn")
-	
+
 func winGame():
 	stopGame()
 	Sound.stopMusic()
@@ -140,7 +140,7 @@ func _process(delta):
 		alarmDelta = delta * 0.025
 	else:
 		alarmDelta = -delta * 0.01
-		
+
 	if inMetalDetector:
 		alarmDelta += Player.metalCarried() * 0.004
 

@@ -11,7 +11,7 @@ func _ready():
 		Player.justStarting = false
 		Player.position = $startingPoint.position
 		Player.rotation = PI/2
-		
+
 	for c in get_children():
 		if c.has_method("imMagnet") :
 			State.addMagnet(c.position, c.strength)
@@ -25,13 +25,13 @@ func rightToSector(sector):
 		return
 	get_tree().change_scene(sectorPath(sector))
 	Player.position.x = playerOffset
-	
+
 func leftToSector(sector):
 	if cannotLeaveSector():
 		return
 	get_tree().change_scene(sectorPath(sector))
 	Player.position.x = State.width - playerOffset
-	
+
 func upToSector(sector):
 	if cannotLeaveSector():
 		return

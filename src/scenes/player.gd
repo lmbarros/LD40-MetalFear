@@ -45,7 +45,7 @@ func updateWeapon():
 func _process(delta):
 	if !State.isGameRunning:
 		return
-	
+
 	velocity = Vector2()
 
 	# Walk
@@ -60,7 +60,7 @@ func _process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		
+
 	# Rotate before magnet influence
 	if velocity.length_squared() > 0:
 		rotation = velocity.angle() + PI/2
@@ -73,7 +73,7 @@ func _process(delta):
 	State.playerWalked(velocity.length() * delta)
 	Player.position.x = clamp(Player.position.x, 0, State.width)
 	Player.position.y = clamp(Player.position.y, 0, State.height)
-	
+
 	# Switch weapons
 	if Input.is_action_just_pressed("next_weapon"):
 		nextWeapon()
@@ -89,7 +89,7 @@ func _process(delta):
 
 func attackHelper(rayCast):
 	State.playerAttacked(currWeapon())
-	
+
 	rayCast.force_raycast_update()
 	if !rayCast.is_colliding():
 		return false
@@ -109,7 +109,7 @@ func meleeAttack():
 		return
 	if attackHelper($meleeRayCast3):
 		return
-	
+
 func firearmAttack():
 	Sound.playGunfire()
 	attackHelper($shotRayCast)
